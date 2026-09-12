@@ -1,0 +1,28 @@
+[
+  {
+    "fixture": "normal",
+    "http_status": 200,
+    "execution_mode": "live",
+    "retrieval": {
+      "requested_mode": "dense",
+      "actual_mode": "dense",
+      "fallback_reason": null,
+      "model": "voyageai/voyage-4",
+      "dimensions": 1024
+    },
+    "diagnostics": {
+      "llm_calls": 3,
+      "embedding_calls": 1,
+      "cache_hits": 0,
+      "elapsed_ms": 32717.51,
+      "tool_calls": 3
+    },
+    "tool_names": [
+      "retrieve_evidence",
+      "get_world_rule",
+      "audit_human_plan"
+    ],
+    "audited_proposals": 1,
+    "warnings": []
+  }
+]

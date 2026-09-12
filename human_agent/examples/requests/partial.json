@@ -1,0 +1,47 @@
+{
+  "schema_version": "2.0",
+  "request_id": "human-partial-001",
+  "state_id": "state-0-r1",
+  "world_rules_version": "0.12",
+  "tick": 0,
+  "snapshot_phase": "between_ticks",
+  "world_status": "paused",
+  "resources": {
+    "water": 3000,
+    "oxygen": 8000,
+    "food": 120000,
+    "power": 6000
+  },
+  "crew": [
+    {
+      "id": "crew-1",
+      "alive": true,
+      "food_energy": 2400,
+      "water": 1.5
+    },
+    {
+      "id": "crew-2",
+      "alive": true,
+      "food_energy": 2400,
+      "water": 1.5
+    },
+    {
+      "id": "crew-3",
+      "alive": true,
+      "food_energy": 2400,
+      "water": 1.5
+    },
+    {
+      "id": "crew-4",
+      "alive": true,
+      "food_energy": 2400,
+      "water": 1.5
+    }
+  ],
+  "plots": null,
+  "water_production_available": null,
+  "next_tick_plan": null,
+  "analysis": {
+    "include_recommendations": true
+  }
+}

@@ -1,0 +1,25 @@
+.venv/
+.venv-bridge/
+config/runtime.yaml
+__pycache__/
+.pytest_cache/
+*.pyc
+node_modules/
+dist/
+.env
+plant_agent_new/data/index
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+artifacts/
+
+# Local secrets and generated runtime files
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+.DS_Store

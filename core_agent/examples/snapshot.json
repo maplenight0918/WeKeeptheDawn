@@ -1,0 +1,181 @@
+{
+  "world_version": 0,
+  "rules_version": "greenhouse-2026-09-12-v2",
+  "tick": 0,
+  "world_status": "running",
+  "snapshot_phase": "between_ticks",
+  "resources": {
+    "water": 3000,
+    "food": 120000,
+    "oxygen": 8000,
+    "power": 6000
+  },
+  "crew": [
+    {
+      "id": "crew-0",
+      "food_energy": 2400,
+      "water": 1.5,
+      "alive": true
+    },
+    {
+      "id": "crew-1",
+      "food_energy": 2400,
+      "water": 1.5,
+      "alive": true
+    },
+    {
+      "id": "crew-2",
+      "food_energy": 2400,
+      "water": 1.5,
+      "alive": true
+    },
+    {
+      "id": "crew-3",
+      "food_energy": 2400,
+      "water": 1.5,
+      "alive": true
+    }
+  ],
+  "plots": [
+    {
+      "id": "plot-0",
+      "crop_type": "lettuce",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-1",
+      "crop_type": "lettuce",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-2",
+      "crop_type": "lettuce",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-3",
+      "crop_type": "lettuce",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-4",
+      "crop_type": "potato",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-5",
+      "crop_type": "potato",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-6",
+      "crop_type": "potato",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-7",
+      "crop_type": "potato",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-8",
+      "crop_type": "tomato",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-9",
+      "crop_type": "tomato",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-10",
+      "crop_type": "tomato",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-11",
+      "crop_type": "tomato",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-12",
+      "crop_type": "wheat",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-13",
+      "crop_type": "wheat",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-14",
+      "crop_type": "wheat",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-15",
+      "crop_type": "wheat",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-16",
+      "crop_type": "soybean",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-17",
+      "crop_type": "soybean",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-18",
+      "crop_type": "soybean",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-19",
+      "crop_type": "soybean",
+      "status": "growing",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "global": {
+    "biomass_rate": {
+      "unit": "g/m2/day",
+      "median": 12.3,
+      "p25": 6.0,
+      "p75": 33.0,
+      "n_values": 91,
+      "n_docs": 27
+    },
+    "lue": {
+      "unit": "g/mol",
+      "median": 0.675,
+      "p25": 0.59,
+      "p75": 0.9,
+      "n_values": 44,
+      "n_docs": 14
+    },
+    "transpiration": {
+      "unit": "L/m2/day",
+      "median": 5.0,
+      "p25": 4.5,
+      "p75": 6.0,
+      "n_values": 12,
+      "n_docs": 8
+    },
+    "transpiration_total": {
+      "unit": "L/day",
+      "median": 5.5,
+      "p25": 1.0,
+      "p75": 16.0,
+      "n_values": 38,
+      "n_docs": 20
+    },
+    "photosyn_rate": {
+      "unit": "umol CO2/m2/s",
+      "median": 15.0,
+      "p25": 5.0,
+      "p75": 35.0,
+      "n_values": 449,
+      "n_docs": 136
+    },
+    "led_power": {
+      "unit": "W/m2",
+      "median": 150.0,
+      "p25": 50.0,
+      "p75": 255.0,
+      "n_values": 139,
+      "n_docs": 51
+    },
+    "growth_days": {
+      "unit": "day",
+      "median": 23.0,
+      "p25": 14.0,
+      "p75": 40.0,
+      "n_values": 542,
+      "n_docs": 257
+    },
+    "wue": {
+      "unit": "g/L",
+      "median": 3.0,
+      "p25": 1.29,
+      "p75": 7.91,
+      "n_values": 511,
+      "n_docs": 122
+    },
+    "harvest_index": {
+      "unit": "ratio",
+      "median": 0.545,
+      "p25": 0.43,
+      "p75": 0.78,
+      "n_values": 11,
+      "n_docs": 9
+    }
+  },
+  "per_crop": {
+    "lettuce": {
+      "biomass_rate_median": 20.0,
+      "p25": 16.0,
+      "p75": 40.0,
+      "n": 13
+    },
+    "wheat": {
+      "biomass_rate_median": 20.0,
+      "p25": 8.0,
+      "p75": 33.0,
+      "n": 35
+    },
+    "potato": {
+      "biomass_rate_median": 20.0,
+      "p25": 9.0,
+      "p75": 37.5,
+      "n": 23
+    },
+    "soybean": {
+      "biomass_rate_median": 16.0,
+      "p25": 8.0,
+      "p75": 33.0,
+      "n": 17
+    },
+    "tomato": {
+      "biomass_rate_median": 20.0,
+      "p25": 14.9,
+      "p75": 33.0,
+      "n": 11
+    },
+    "spirulina": {
+      "biomass_rate_median": 13.8,
+      "p25": 12.6,
+      "p75": 69.0,
+      "n": 4
+    }
+  }
+}

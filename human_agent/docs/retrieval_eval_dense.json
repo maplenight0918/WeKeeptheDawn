@@ -1,0 +1,192 @@
+{
+  "mode": "dense",
+  "corpus_version": "corpus-4c40231326d1bc2b",
+  "index_version": "index-26765ae220846386",
+  "passed": 10,
+  "total": 10,
+  "method": "Configured retrieval: dense+BM25 fusion with exact numeric anchors, or BM25; top-5 original-text term presence and rule routing, not general entailment certification.",
+  "results": [
+    {
+      "id": "energy",
+      "query": "nominal human food energy consumed 3054 kcal 12.778 MJ",
+      "passed": true,
+      "actual_mode": "mixed",
+      "fallback_reason": null,
+      "evidence_ids": [
+        "bvad_2022-p72-0-72b803e99f",
+        "bvad_2022-p73-0-bfe0e18801",
+        "nutrition_requirements-p12-0-ff1aff13c4",
+        "bvad_2022-p73-1-3b0e492b8c",
+        "hidh_rev1-p590-1-a681db5596"
+      ],
+      "locators": [
+        "PDF physical page 72; original page; printed page not transcribed",
+        "PDF physical page 73; original page; printed page not transcribed",
+        "PDF physical page 12; original page; printed page not transcribed",
+        "PDF physical page 73; original page; printed page not transcribed",
+        "PDF physical page 590; original page; printed page not transcribed"
+      ]
+    },
+    {
+      "id": "water",
+      "query": "nominal potable water content 3.217",
+      "passed": true,
+      "actual_mode": "mixed",
+      "fallback_reason": null,
+      "evidence_ids": [
+        "bvad_2022-p72-0-72b803e99f",
+        "hidh_rev1-p388-0-f8ed4629e6",
+        "hidh_rev1-p382-0-1e0f41be1c",
+        "hidh_rev1-p389-0-ab1841e240",
+        "hidh_rev1-p390-0-1311bcc605"
+      ],
+      "locators": [
+        "PDF physical page 72; original page; printed page not transcribed",
+        "PDF physical page 388; original page; printed page not transcribed",
+        "PDF physical page 382; original page; printed page not transcribed",
+        "PDF physical page 389; original page; printed page not transcribed",
+        "PDF physical page 390; original page; printed page not transcribed"
+      ]
+    },
+    {
+      "id": "oxygen",
+      "query": "nominal human oxygen consumed 0.895 kg per crewmember",
+      "passed": true,
+      "actual_mode": "mixed",
+      "fallback_reason": null,
+      "evidence_ids": [
+        "bvad_2022-p72-0-72b803e99f",
+        "bvad_2022-p73-0-bfe0e18801",
+        "bvad_2022-p77-0-70036dd4a7",
+        "hidh_rev1-p365-0-92f45b8f1a",
+        "metabolic_2019-p3-0-285678596b"
+      ],
+      "locators": [
+        "PDF physical page 72; original page; printed page not transcribed",
+        "PDF physical page 73; original page; printed page not transcribed",
+        "PDF physical page 77; original page; printed page not transcribed",
+        "PDF physical page 365; original page; printed page not transcribed",
+        "PDF physical page 3; original page; printed page not transcribed"
+      ]
+    },
+    {
+      "id": "activity",
+      "query": "reference astronaut 30 minutes aerobic 60 minutes resistive exercise",
+      "passed": true,
+      "actual_mode": "mixed",
+      "fallback_reason": null,
+      "evidence_ids": [
+        "metabolic_2019-p2-0-94de1e3731",
+        "bvad_2022-p72-0-72b803e99f",
+        "metabolic_2019-p3-0-285678596b",
+        "human_adaptation_2021-p40-2-e717b9a470",
+        "bvad_2022-p73-0-bfe0e18801"
+      ],
+      "locators": [
+        "PDF physical page 2; original page; printed page not transcribed",
+        "PDF physical page 72; original page; printed page not transcribed",
+        "PDF physical page 3; original page; printed page not transcribed",
+        "PDF physical page 40; original page; printed page not transcribed",
+        "PDF physical page 73; original page; printed page not transcribed"
+      ]
+    },
+    {
+      "id": "drinking_definition",
+      "query": "drinking water food rehydration potable water definition",
+      "passed": true,
+      "actual_mode": "mixed",
+      "fallback_reason": null,
+      "evidence_ids": [
+        "hidh_rev1-p390-0-1311bcc605",
+        "hidh_rev1-p391-0-a1d34ca9d7",
+        "hidh_rev1-p382-0-1e0f41be1c",
+        "hidh_rev1-p397-0-0cf964a271",
+        "hidh_rev1-p388-0-f8ed4629e6"
+      ],
+      "locators": [
+        "PDF physical page 390; original page; printed page not transcribed",
+        "PDF physical page 391; original page; printed page not transcribed",
+        "PDF physical page 382; original page; printed page not transcribed",
+        "PDF physical page 397; original page; printed page not transcribed",
+        "PDF physical page 388; original page; printed page not transcribed"
+      ]
+    },
+    {
+      "id": "zh_energy",
+      "query": "太空人活動時的每日熱量需求基準",
+      "passed": true,
+      "actual_mode": "mixed",
+      "fallback_reason": null,
+      "evidence_ids": [
+        "nutrition_requirements-p14-0-1d73566a4a",
+        "nutrition_requirements-p11-0-f8f7cf4a51",
+        "hidh_rev1-p590-0-0348c2bdfa",
+        "hidh_rev1-p591-0-8a6be4c7a1",
+        "bvad_2022-p73-0-bfe0e18801"
+      ],
+      "locators": [
+        "PDF physical page 14; original page; printed page not transcribed",
+        "PDF physical page 11; original page; printed page not transcribed",
+        "PDF physical page 590; original page; printed page not transcribed",
+        "PDF physical page 591; original page; printed page not transcribed",
+        "PDF physical page 73; original page; printed page not transcribed"
+      ]
+    },
+    {
+      "id": "zh_water",
+      "query": "太空人喝水與食物用水有什麼差異",
+      "passed": true,
+      "actual_mode": "mixed",
+      "fallback_reason": null,
+      "evidence_ids": [
+        "hidh_rev1-p390-0-1311bcc605",
+        "hidh_rev1-p382-0-1e0f41be1c",
+        "metabolic_2019-p2-0-94de1e3731",
+        "hidh_rev1-p1116-0-19cb952ac4",
+        "hidh_rev1-p391-0-a1d34ca9d7"
+      ],
+      "locators": [
+        "PDF physical page 390; original page; printed page not transcribed",
+        "PDF physical page 382; original page; printed page not transcribed",
+        "PDF physical page 2; original page; printed page not transcribed",
+        "PDF physical page 1116; original page; printed page not transcribed",
+        "PDF physical page 391; original page; printed page not transcribed"
+      ]
+    },
+    {
+      "id": "no_evidence",
+      "query": "quasar boson entanglement spectroscopy",
+      "passed": true,
+      "actual_mode": "dense",
+      "fallback_reason": null,
+      "evidence_ids": [],
+      "locators": []
+    },
+    {
+      "id": "world_water",
+      "query": "遊戲製水是否是物理守恆",
+      "passed": true,
+      "actual_mode": "not_used",
+      "fallback_reason": "world_rule_routing",
+      "evidence_ids": [
+        "water_production.conversion"
+      ],
+      "locators": [
+        "spec.md 3.4"
+      ]
+    },
+    {
+      "id": "world_death",
+      "query": "個人能量歸零規則",
+      "passed": true,
+      "actual_mode": "not_used",
+      "fallback_reason": "world_rule_routing",
+      "evidence_ids": [
+        "crew.personal.death"
+      ],
+      "locators": [
+        "spec.md 3.2"
+      ]
+    }
+  ]
+}

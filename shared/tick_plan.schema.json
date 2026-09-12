@@ -1,0 +1,147 @@
+{
+  "$defs": {
+    "PlotOp": {
+      "additionalProperties": false,
+      "properties": {
+        "order": {
+          "title": "Order",
+          "type": "integer"
+        },
+        "crew_id": {
+          "title": "Crew Id",
+          "type": "string"
+        },
+        "plot_id": {
+          "title": "Plot Id",
+          "type": "string"
+        },
+        "op": {
+          "enum": [
+            "plant",
+            "harvest",
+            "clear"
+          ],
+          "title": "Op",
+          "type": "string"
+        },
+        "crop": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "lettuce",
+                "potato",
+                "tomato",
+                "wheat",
+                "soybean"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Crop"
+        }
+      },
+      "required": [
+        "order",
+        "crew_id",
+        "plot_id",
+        "op"
+      ],
+      "title": "PlotOp",
+      "type": "object"
+    },
+    "Refill": {
+      "additionalProperties": false,
+      "properties": {
+        "crew_id": {
+          "title": "Crew Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "food",
+            "water"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "amount": {
+          "title": "Amount",
+          "type": "number"
+        }
+      },
+      "required": [
+        "crew_id",
+        "kind",
+        "amount"
+      ],
+      "title": "Refill",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "tick": {
+      "title": "Tick",
+      "type": "integer"
+    },
+    "state_version": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "State Version"
+    },
+    "refills": {
+      "items": {
+        "$ref": "#/$defs/Refill"
+      },
+      "title": "Refills",
+      "type": "array"
+    },
+    "generation": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Generation",
+      "type": "object"
+    },
+    "water_production_l": {
+      "default": 0,
+      "title": "Water Production L",
+      "type": "number"
+    },
+    "irrigation": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Irrigation",
+      "type": "array"
+    },
+    "plot_ops": {
+      "items": {
+        "$ref": "#/$defs/PlotOp"
+      },
+      "title": "Plot Ops",
+      "type": "array"
+    },
+    "rationale": {
+      "default": "",
+      "title": "Rationale",
+      "type": "string"
+    }
+  },
+  "required": [
+    "tick"
+  ],
+  "title": "TickPlan",
+  "type": "object"
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "fixture": "normal",
+    "http_status": 200,
+    "execution_mode": "mock",
+    "retrieval": {
+      "requested_mode": "dense",
+      "actual_mode": "bm25",
+      "fallback_reason": "mock_offline_bm25",
+      "model": null,
+      "dimensions": null
+    },
+    "diagnostics": {
+      "llm_calls": 0,
+      "embedding_calls": 0,
+      "cache_hits": 0,
+      "elapsed_ms": 36.82,
+      "tool_calls": 1
+    },
+    "tool_names": [
+      "retrieve_evidence"
+    ],
+    "audited_proposals": 0,
+    "warnings": []
+  },
+  {
+    "fixture": "critical",
+    "http_status": 200,
+    "execution_mode": "mock",
+    "retrieval": {
+      "requested_mode": "dense",
+      "actual_mode": "bm25",
+      "fallback_reason": "mock_offline_bm25",
+      "model": null,
+      "dimensions": null
+    },
+    "diagnostics": {
+      "llm_calls": 0,
+      "embedding_calls": 0,
+      "cache_hits": 0,
+      "elapsed_ms": 35.3,
+      "tool_calls": 1
+    },
+    "tool_names": [
+      "retrieve_evidence"
+    ],
+    "audited_proposals": 0,
+    "warnings": []
+  },
+  {
+    "fixture": "oxygen_early",
+    "http_status": 200,
+    "execution_mode": "mock",
+    "retrieval": {
+      "requested_mode": "dense",
+      "actual_mode": "bm25",
+      "fallback_reason": "mock_offline_bm25",
+      "model": null,
+      "dimensions": null
+    },
+    "diagnostics": {
+      "llm_calls": 0,
+      "embedding_calls": 0,
+      "cache_hits": 0,
+      "elapsed_ms": 34.85,
+      "tool_calls": 1
+    },
+    "tool_names": [
+      "retrieve_evidence"
+    ],
+    "audited_proposals": 0,
+    "warnings": []
+  },
+  {
+    "fixture": "refill_competition",
+    "http_status": 200,
+    "execution_mode": "mock",
+    "retrieval": {
+      "requested_mode": "dense",
+      "actual_mode": "bm25",
+      "fallback_reason": "mock_offline_bm25",
+      "model": null,
+      "dimensions": null
+    },
+    "diagnostics": {
+      "llm_calls": 0,
+      "embedding_calls": 0,
+      "cache_hits": 0,
+      "elapsed_ms": 39.21,
+      "tool_calls": 1
+    },
+    "tool_names": [
+      "retrieve_evidence"
+    ],
+    "audited_proposals": 0,
+    "warnings": []
+  },
+  {
+    "fixture": "irrigation_third_failure",
+    "http_status": 200,
+    "execution_mode": "mock",
+    "retrieval": {
+      "requested_mode": "dense",
+      "actual_mode": "bm25",
+      "fallback_reason": "mock_offline_bm25",
+      "model": null,
+      "dimensions": null
+    },
+    "diagnostics": {
+      "llm_calls": 0,
+      "embedding_calls": 0,
+      "cache_hits": 0,
+      "elapsed_ms": 36.19,
+      "tool_calls": 1
+    },
+    "tool_names": [
+      "retrieve_evidence"
+    ],
+    "audited_proposals": 0,
+    "warnings": []
+  },
+  {
+    "fixture": "partial",
+    "http_status": 200,
+    "execution_mode": "mock",
+    "retrieval": {
+      "requested_mode": "dense",
+      "actual_mode": "bm25",
+      "fallback_reason": "mock_offline_bm25",
+      "model": null,
+      "dimensions": null
+    },
+    "diagnostics": {
+      "llm_calls": 0,
+      "embedding_calls": 0,
+      "cache_hits": 0,
+      "elapsed_ms": 34.91,
+      "tool_calls": 1
+    },
+    "tool_names": [
+      "retrieve_evidence"
+    ],
+    "audited_proposals": 0,
+    "warnings": []
+  }
+]

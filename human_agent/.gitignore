@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+.pytest_cache/
+.tmp/
+.venv/
+venv/
+*.log
+data/embedding_cache/
+examples/manual_responses/
+examples/manual_discussion_responses/
+.DS_Store
+Thumbs.db

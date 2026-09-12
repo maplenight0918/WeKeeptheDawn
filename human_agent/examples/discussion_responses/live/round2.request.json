@@ -1,0 +1,1683 @@
+{
+  "discussion_id": "discussion-example-001",
+  "round": 2,
+  "sender": "core",
+  "recipient": "human",
+  "world_version": 0,
+  "content": {
+    "question": "請評論前輪 Human 與 Plant 建議：降低發電比例後，是否代表同一人能在這個 tick 兼做飲水？請針對真實提案提供 reviews，說明工作占用限制，保留灌溉配額。",
+    "world": {
+      "world_version": 0,
+      "rules_version": "greenhouse-2026-09-12-v1",
+      "tick": 0,
+      "resources": {
+        "water": 3000,
+        "food": 120000,
+        "oxygen": 8000,
+        "power": 6000
+      },
+      "crew": [
+        {
+          "id": "crew-0",
+          "food_energy": 2400,
+          "water": 1.5,
+          "alive": true
+        },
+        {
+          "id": "crew-1",
+          "food_energy": 2400,
+          "water": 1.5,
+          "alive": true
+        },
+        {
+          "id": "crew-2",
+          "food_energy": 2400,
+          "water": 1.5,
+          "alive": true
+        },
+        {
+          "id": "crew-3",
+          "food_energy": 2400,
+          "water": 1.5,
+          "alive": true
+        }
+      ],
+      "plots": [
+        {
+          "id": "plot-0",
+          "crop_type": "lettuce",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-1",
+          "crop_type": "lettuce",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-2",
+          "crop_type": "lettuce",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-3",
+          "crop_type": "lettuce",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-4",
+          "crop_type": "potato",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-5",
+          "crop_type": "potato",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-6",
+          "crop_type": "potato",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-7",
+          "crop_type": "potato",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-8",
+          "crop_type": "tomato",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-9",
+          "crop_type": "tomato",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-10",
+          "crop_type": "tomato",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-11",
+          "crop_type": "tomato",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-12",
+          "crop_type": "wheat",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-13",
+          "crop_type": "wheat",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-14",
+          "crop_type": "wheat",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-15",
+          "crop_type": "wheat",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-16",
+          "crop_type": "soybean",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-17",
+          "crop_type": "soybean",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-18",
+          "crop_type": "soybean",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-19",
+          "crop_type": "soybean",
+          "status": "growing",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        }
+      ],
+      "world_status": "planning",
+      "snapshot_phase": "between_ticks",
+      "next_tick_plan": {
+        "for_tick": 1,
+        "crew_tasks": [
+          {
+            "crew_id": "crew-0",
+            "task": "generate",
+            "work_fraction": 1
+          },
+          {
+            "crew_id": "crew-1",
+            "task": "generate",
+            "work_fraction": 1
+          },
+          {
+            "crew_id": "crew-2",
+            "task": "generate",
+            "work_fraction": 1
+          },
+          {
+            "crew_id": "crew-3",
+            "task": "generate",
+            "work_fraction": 1
+          }
+        ],
+        "refill_order": [],
+        "water_production_request_liters": 174,
+        "irrigation_allocations": [
+          {
+            "plot_id": "plot-0",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-1",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-2",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-3",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-4",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-5",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-6",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-7",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-8",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-9",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-10",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-11",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-12",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-13",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-14",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-15",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-16",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-17",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-18",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-19",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          }
+        ],
+        "crop_operation_order": []
+      },
+      "water_production_available": true
+    },
+    "rules": {
+      "rules_version": "greenhouse-2026-09-12-v1",
+      "tick_hours": 1,
+      "environment": {
+        "carbon_dioxide": {
+          "value": 500,
+          "unit": "ppm",
+          "adjustable": false
+        }
+      },
+      "resources": {
+        "food": {
+          "unit": "game_kcal",
+          "capacity": 200000,
+          "warning": 12000
+        },
+        "water": {
+          "unit": "L",
+          "capacity": 4000,
+          "warning": 400
+        },
+        "oxygen": {
+          "unit": "OU",
+          "capacity": 15000,
+          "warning": 600
+        },
+        "power": {
+          "unit": "EU",
+          "capacity": 10000,
+          "warning": 1000
+        }
+      },
+      "crew": {
+        "daily_reference": {
+          "kcal": 3054,
+          "oxygen_kg": 0.895,
+          "water_L": 3.217
+        },
+        "per_tick": {
+          "food_energy": 127.25,
+          "oxygen": 37.291666666666664,
+          "water": 0.13404166666666667
+        },
+        "capacity": {
+          "food_energy": 3000,
+          "water": 2
+        },
+        "warning": {
+          "food_energy": 700,
+          "water": 0.4
+        },
+        "refill_limit": {
+          "eat": 1000,
+          "drink": 0.5
+        },
+        "refill_ratio": 1,
+        "death": "personal energy or water <= 0; any crew death ends mission"
+      },
+      "generation": {
+        "food_energy": 100,
+        "oxygen": 25,
+        "power": 250,
+        "max_units_per_crew_tick": 1,
+        "stations": 4
+      },
+      "water_production": {
+        "power_per_L": 2,
+        "oxygen_per_L": 0.2,
+        "max_L_per_tick": 250
+      },
+      "irrigation": {
+        "water_per_plot": 8.7,
+        "power_per_plot": 5,
+        "atomic_inputs": true,
+        "misses_until_death": 3,
+        "priority": "Core supplied order; omitted living plots receive nothing",
+        "failure": "no input deducted, no growth or oxygen; success resets misses",
+        "dead": "no consumption or yield; clear before planting"
+      },
+      "crops": {
+        "lettuce": {
+          "maturity_ticks": 30,
+          "harvest_game_kcal": 585,
+          "oxygen_per_tick": 16
+        },
+        "potato": {
+          "maturity_ticks": 90,
+          "harvest_game_kcal": 8775,
+          "oxygen_per_tick": 16
+        },
+        "tomato": {
+          "maturity_ticks": 90,
+          "harvest_game_kcal": 1755,
+          "oxygen_per_tick": 22
+        },
+        "wheat": {
+          "maturity_ticks": 90,
+          "harvest_game_kcal": 13162.5,
+          "oxygen_per_tick": 10
+        },
+        "soybean": {
+          "maturity_ticks": 90,
+          "harvest_game_kcal": 12162.15,
+          "oxygen_per_tick": 12
+        }
+      },
+      "tasks": {
+        "occupancy": "eat, drink, generate, plant, harvest, clear: one crew per tick",
+        "controls_and_movement": "visual only, no occupancy",
+        "crop_actions": "at tick end, ordered; no premature harvest; full storage blocks harvest",
+        "plant": "empty plot only; no seed cost; starts growing next tick"
+      },
+      "oxygen_death": "public oxygen <= 0 immediately kills all crew, even before plants produce oxygen",
+      "tick_order": [
+        "ordered refill",
+        "personal metabolism",
+        "public breathing",
+        "generation",
+        "water production",
+        "ordered irrigation",
+        "ordered crop actions"
+      ],
+      "planning": "world paused while planning; validate state version before apply; no simulator",
+      "completion": "no stable/success threshold; continue until death"
+    },
+    "analysis_scope": [
+      "water",
+      "oxygen",
+      "power",
+      "food"
+    ],
+    "unit_conversion_policy": "Core傳送世界原始數值與單位，不轉換文獻單位。專家自行完成文獻與世界單位、時間基準的換算；回覆可執行建議須使用世界單位，並在evidence_and_unknowns說明換算依據或缺少的映射。不得自行假設EU對Wh的比例。電力及跨角色資源分配由Core決定。",
+    "previous_messages": [
+      {
+        "message_id": "human-67521ef3e5774d338bb4b59958c24c5f",
+        "discussion_id": "discussion-example-001",
+        "round": 1,
+        "sender": "human",
+        "recipient": "core",
+        "world_version": 0,
+        "display_text": "已完成個人與公共資源分析。建議重點：請 Core 檢視候選發電工作量。已有單 tick 算術預檢，仍由 Core 決策。",
+        "explanation": {
+          "observations": [
+            "crew-0：存活，個人能量 2400 遊戲 kcal，水 1.5 L。",
+            "crew-1：存活，個人能量 2400 遊戲 kcal，水 1.5 L。",
+            "crew-2：存活，個人能量 2400 遊戲 kcal，水 1.5 L。",
+            "crew-3：存活，個人能量 2400 遊戲 kcal，水 1.5 L。",
+            "公共 water：3000 L，庫存標示 normal。",
+            "公共 oxygen：8000 OU，庫存標示 normal。",
+            "公共 food：120000 game_kcal，庫存標示 normal。",
+            "公共 power：6000 EU，庫存標示 normal。",
+            "原計畫預檢狀態：feasible_in_scope；unsafe_in_scope 表示已知植物死亡等不安全結果，並非全員死亡；incomplete 表示核算依據不足。"
+          ],
+          "proposals": [
+            {
+              "proposal_id": "human-67521ef3e5774d338bb4b59958c24c5f-p1",
+              "strategy": "請 Core 檢視候選發電工作量。",
+              "reason": "依目前個人與公共資源、工作占用及固定世界規則提出，交由 Core 比較原計畫後決策。",
+              "expected_effect": "候選的單 tick 算術預檢為 verified_for_audited_scope，不是世界試跑。 灌溉後、作物操作前公共庫存：water=3000.0, oxygen=8075.233333333334, food=120000.0, power=6000.0。",
+              "tradeoffs": [
+                "進食、飲水與作物工作會占用人員；部分發電仍不能同 tick 兼做其他工作。",
+                "降低發電量可減少額外能量與氧氣消耗，也會減少電力產出。"
+              ],
+              "evidence": [
+                "world v0.12 規則 generation.proportional",
+                "world v0.12 規則 crew.task.exclusive",
+                "world v0.12 規則 water_production.conversion",
+                "world v0.12 規則 plant.irrigation.atomic"
+              ]
+            }
+          ],
+          "reviews": [],
+          "conflicts": [],
+          "follow_up_reason": "",
+          "decision_reason": "原計畫核算發電為1000 EU、製水174 L，灌溉後公共水量為3000 L、電力為6552 EU，每人個人能量為2172.75 game kcal。替代方案已核算每人發電工作量0.448，合計發電448 EU，維持相同製水與灌溉後，公共水量仍為3000 L、電力為6000 EU，每人個人能量為2227.95 game kcal。替代方案的公共氧氣為8075.2333 OU，高於原計畫的8020.0333 OU；兩案每人個人水量均為約1.365958 L，因此維持公共供水不等於補充個人飲水。建議以減少耗能換取較少電力累積，但此核算僅涵蓋灌溉後、作物操作前，未執行任何操作，也不代表長期安全。",
+          "uncertainties": [
+            "僅有單 tick 規則算術預檢，沒有未來 Simulator，也沒有執行世界操作。",
+            "規則數值已對照本機 world v0.12；共享發電比例及死亡微順序仍需與世界後端整合驗證。",
+            "科學文獻尚未全面逐項審閱；已檢索不等於已證明建議。",
+            "decision_reason 與 reviews 是模型公開評估；量化效果只以候選核算結果為準。",
+            "本輪 adapter_uncertainties 為空，候選核算亦未列出未知相依條件；核算範圍仍不涵蓋後續刻次。",
+            "較低工作量仍占用四人的任務；後续須由Core安排個人進食與飲水，不能將此候選視為可永久重複的排程。",
+            "本輪使用世界單位比較，未引入科學文獻推估；若另需換算電能，應使用使用者確認的1 EU = 3.9745 kWh = 3974.5 Wh，這不是NASA定義，亦不改變遊戲係數。"
+          ]
+        },
+        "content": {
+          "observations": [
+            "crew-0：存活，個人能量 2400 遊戲 kcal，水 1.5 L。",
+            "crew-1：存活，個人能量 2400 遊戲 kcal，水 1.5 L。",
+            "crew-2：存活，個人能量 2400 遊戲 kcal，水 1.5 L。",
+            "crew-3：存活，個人能量 2400 遊戲 kcal，水 1.5 L。",
+            "公共 water：3000 L，庫存標示 normal。",
+            "公共 oxygen：8000 OU，庫存標示 normal。",
+            "公共 food：120000 game_kcal，庫存標示 normal。",
+            "公共 power：6000 EU，庫存標示 normal。",
+            "原計畫預檢狀態：feasible_in_scope；unsafe_in_scope 表示已知植物死亡等不安全結果，並非全員死亡；incomplete 表示核算依據不足。"
+          ],
+          "priorities": [
+            "優先處理人員存活、吃喝補給與公共氧氣，再比較工作和供水用電。"
+          ],
+          "suggested_actions": [
+            {
+              "proposal_id": "human-67521ef3e5774d338bb4b59958c24c5f-p1",
+              "description": "請 Core 檢視候選發電工作量。",
+              "proposal_kind": "adjust_generation",
+              "target_crew_ids": [
+                "crew-0",
+                "crew-1",
+                "crew-2",
+                "crew-3"
+              ],
+              "proposed_changes": {
+                "candidate_plan": {
+                  "for_tick": 1,
+                  "crew_tasks": [
+                    {
+                      "crew_id": "crew-0",
+                      "task": "generate",
+                      "work_fraction": 0.448
+                    },
+                    {
+                      "crew_id": "crew-1",
+                      "task": "generate",
+                      "work_fraction": 0.448
+                    },
+                    {
+                      "crew_id": "crew-2",
+                      "task": "generate",
+                      "work_fraction": 0.448
+                    },
+                    {
+                      "crew_id": "crew-3",
+                      "task": "generate",
+                      "work_fraction": 0.448
+                    }
+                  ],
+                  "refill_order": [],
+                  "water_production_request_liters": 174.0,
+                  "irrigation_allocations": [
+                    {
+                      "plot_id": "plot-0",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-1",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-2",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-3",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-4",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-5",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-6",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-7",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-8",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-9",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-10",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-11",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-12",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-13",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-14",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-15",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-16",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-17",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-18",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    },
+                    {
+                      "plot_id": "plot-19",
+                      "water_quota_liters": 8.7,
+                      "power_quota_eu": 5.0
+                    }
+                  ],
+                  "crop_operation_order": []
+                }
+              },
+              "feasibility": "verified_for_audited_scope",
+              "audit_result_id": "audit-1f2921d1ad5b0d52",
+              "expected_effect": {
+                "candidate_audit": {
+                  "result_id": "audit-1f2921d1ad5b0d52",
+                  "status": "feasible_in_scope",
+                  "scope": "hypothetical_single_tick_human_preflight",
+                  "for_tick": 1,
+                  "coverage_end": "after_irrigation_before_crop_operations",
+                  "fatal_stage": null,
+                  "stage_results": {
+                    "refill": {
+                      "status": "evaluated",
+                      "details": {
+                        "transfers": [],
+                        "crew_after": {
+                          "crew-0": {
+                            "food_energy": 2400.0,
+                            "water": 1.5
+                          },
+                          "crew-1": {
+                            "food_energy": 2400.0,
+                            "water": 1.5
+                          },
+                          "crew-2": {
+                            "food_energy": 2400.0,
+                            "water": 1.5
+                          },
+                          "crew-3": {
+                            "food_energy": 2400.0,
+                            "water": 1.5
+                          }
+                        }
+                      }
+                    },
+                    "base": {
+                      "status": "evaluated",
+                      "details": {
+                        "crew_after": {
+                          "crew-0": {
+                            "food_energy": 2272.75,
+                            "water": 1.3659583333333334
+                          },
+                          "crew-1": {
+                            "food_energy": 2272.75,
+                            "water": 1.3659583333333334
+                          },
+                          "crew-2": {
+                            "food_energy": 2272.75,
+                            "water": 1.3659583333333334
+                          },
+                          "crew-3": {
+                            "food_energy": 2272.75,
+                            "water": 1.3659583333333334
+                          }
+                        },
+                        "respiration": 149.16666666666666,
+                        "public_oxygen_after": 7850.833333333333,
+                        "fatal_conditions": []
+                      }
+                    },
+                    "generation": {
+                      "status": "evaluated",
+                      "details": {
+                        "eligible_work": {
+                          "crew-0": 0.448,
+                          "crew-1": 0.448,
+                          "crew-2": 0.448,
+                          "crew-3": 0.448
+                        },
+                        "actual_work": {
+                          "crew-0": 0.448,
+                          "crew-1": 0.448,
+                          "crew-2": 0.448,
+                          "crew-3": 0.448
+                        },
+                        "total_work": 1.792,
+                        "power_produced": 448.0,
+                        "fatal_conditions": []
+                      }
+                    },
+                    "water_production": {
+                      "status": "evaluated",
+                      "details": {
+                        "requested_liters": 174.0,
+                        "actual_liters": 174.0,
+                        "limited": false,
+                        "availability": true
+                      }
+                    },
+                    "irrigation": {
+                      "status": "evaluated",
+                      "details": {
+                        "plots": {
+                          "plot-0": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-1": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-2": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-3": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-4": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-5": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-6": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-7": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-8": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-9": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-10": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-11": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-12": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-13": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-14": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-15": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-16": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-17": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-18": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          },
+                          "plot-19": {
+                            "supplied": true,
+                            "reason": "full_supply",
+                            "will_die": false,
+                            "consecutive_unirrigated_ticks": 0
+                          }
+                        },
+                        "water_used": 174.0,
+                        "power_used": 100.0,
+                        "oxygen_produced": 304.0,
+                        "oxygen_overflow": 0.0
+                      }
+                    },
+                    "crop_operations": {
+                      "status": "unknown",
+                      "details": {
+                        "operations": [],
+                        "reason": "outside audited scope"
+                      }
+                    }
+                  },
+                  "ledger": [
+                    {
+                      "phase": "base",
+                      "kind": "consumption",
+                      "resource": "food_energy",
+                      "entity_id": "crew-0",
+                      "amount": 127.25
+                    },
+                    {
+                      "phase": "base",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "crew-0",
+                      "amount": 0.13404166666666667
+                    },
+                    {
+                      "phase": "base",
+                      "kind": "consumption",
+                      "resource": "food_energy",
+                      "entity_id": "crew-1",
+                      "amount": 127.25
+                    },
+                    {
+                      "phase": "base",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "crew-1",
+                      "amount": 0.13404166666666667
+                    },
+                    {
+                      "phase": "base",
+                      "kind": "consumption",
+                      "resource": "food_energy",
+                      "entity_id": "crew-2",
+                      "amount": 127.25
+                    },
+                    {
+                      "phase": "base",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "crew-2",
+                      "amount": 0.13404166666666667
+                    },
+                    {
+                      "phase": "base",
+                      "kind": "consumption",
+                      "resource": "food_energy",
+                      "entity_id": "crew-3",
+                      "amount": 127.25
+                    },
+                    {
+                      "phase": "base",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "crew-3",
+                      "amount": 0.13404166666666667
+                    },
+                    {
+                      "phase": "base",
+                      "kind": "consumption",
+                      "resource": "oxygen",
+                      "entity_id": "public",
+                      "amount": 149.16666666666666
+                    },
+                    {
+                      "phase": "generation",
+                      "kind": "consumption",
+                      "resource": "food_energy",
+                      "entity_id": "crew-0",
+                      "amount": 44.8
+                    },
+                    {
+                      "phase": "generation",
+                      "kind": "consumption",
+                      "resource": "food_energy",
+                      "entity_id": "crew-1",
+                      "amount": 44.8
+                    },
+                    {
+                      "phase": "generation",
+                      "kind": "consumption",
+                      "resource": "food_energy",
+                      "entity_id": "crew-2",
+                      "amount": 44.8
+                    },
+                    {
+                      "phase": "generation",
+                      "kind": "consumption",
+                      "resource": "food_energy",
+                      "entity_id": "crew-3",
+                      "amount": 44.8
+                    },
+                    {
+                      "phase": "generation",
+                      "kind": "consumption",
+                      "resource": "oxygen",
+                      "entity_id": "public",
+                      "amount": 44.8
+                    },
+                    {
+                      "phase": "generation",
+                      "kind": "production",
+                      "resource": "power",
+                      "entity_id": "public",
+                      "amount": 448.0
+                    },
+                    {
+                      "phase": "water_production",
+                      "kind": "production",
+                      "resource": "water",
+                      "entity_id": "public",
+                      "amount": 174.0
+                    },
+                    {
+                      "phase": "water_production",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "public",
+                      "amount": 348.0
+                    },
+                    {
+                      "phase": "water_production",
+                      "kind": "consumption",
+                      "resource": "oxygen",
+                      "entity_id": "public",
+                      "amount": 34.8
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-0",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-0",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-0",
+                      "amount": 16.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-1",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-1",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-1",
+                      "amount": 16.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-2",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-2",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-2",
+                      "amount": 16.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-3",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-3",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-3",
+                      "amount": 16.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-4",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-4",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-4",
+                      "amount": 16.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-5",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-5",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-5",
+                      "amount": 16.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-6",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-6",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-6",
+                      "amount": 16.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-7",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-7",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-7",
+                      "amount": 16.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-8",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-8",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-8",
+                      "amount": 22.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-9",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-9",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-9",
+                      "amount": 22.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-10",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-10",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-10",
+                      "amount": 22.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-11",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-11",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-11",
+                      "amount": 22.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-12",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-12",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-12",
+                      "amount": 10.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-13",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-13",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-13",
+                      "amount": 10.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-14",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-14",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-14",
+                      "amount": 10.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-15",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-15",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-15",
+                      "amount": 10.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-16",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-16",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-16",
+                      "amount": 12.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-17",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-17",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-17",
+                      "amount": 12.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-18",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-18",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-18",
+                      "amount": 12.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "water",
+                      "entity_id": "plot-19",
+                      "amount": 8.7
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "consumption",
+                      "resource": "power",
+                      "entity_id": "plot-19",
+                      "amount": 5.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "production",
+                      "resource": "oxygen",
+                      "entity_id": "plot-19",
+                      "amount": 12.0
+                    },
+                    {
+                      "phase": "irrigation",
+                      "kind": "overflow",
+                      "resource": "oxygen",
+                      "entity_id": "public",
+                      "amount": 0.0
+                    }
+                  ],
+                  "known_after_values": {
+                    "public_resources": {
+                      "water": 3000.0,
+                      "oxygen": 8075.233333333334,
+                      "food": 120000.0,
+                      "power": 6000.0
+                    },
+                    "crew": {
+                      "crew-0": {
+                        "food_energy": 2227.95,
+                        "water": 1.3659583333333334
+                      },
+                      "crew-1": {
+                        "food_energy": 2227.95,
+                        "water": 1.3659583333333334
+                      },
+                      "crew-2": {
+                        "food_energy": 2227.95,
+                        "water": 1.3659583333333334
+                      },
+                      "crew-3": {
+                        "food_energy": 2227.95,
+                        "water": 1.3659583333333334
+                      }
+                    }
+                  },
+                  "fatal_conditions": [],
+                  "unknown_dependencies": [],
+                  "limitations": [
+                    "Read-only hypothetical accounting; never an authoritative world state.",
+                    "Stops before crop operations; no harvest, planting, clock advance or future yield simulation.",
+                    "Fatal phase micro-order is unspecified; no terminal complete state is published."
+                  ]
+                },
+                "interpretation": "Candidate values for audited scope only; compare original next_tick_audit. No survival-day claim."
+              },
+              "requires_core_approval": true
+            }
+          ],
+          "acceptable_tradeoffs": [
+            "進食、飲水與作物工作會占用人員；部分發電仍不能同 tick 兼做其他工作。",
+            "降低發電量可減少額外能量與氧氣消耗，也會減少電力產出。"
+          ],
+          "evidence_and_unknowns": [
+            "world v0.12 rules_hash=8cb7fc2c70beb48f7c3f2edec3819f33f4b4968f899b3e9f3eeed504ae4a2e93",
+            "Core rules_version=greenhouse-2026-09-12-v1",
+            "使用者確認換算：1 EU = 3.9745 kWh = 3974.5 Wh；來源 unit_conversion.eu_kwh，非 NASA 認證，不改遊戲係數。",
+            "公共電力 6000 EU 對應 23847 kWh。",
+            "執行模式 live；耗時 28530.01 ms；LLM 呼叫 3 次。",
+            "world v0.12 規則 generation.proportional",
+            "world v0.12 規則 water_production.conversion",
+            "world v0.12 規則 plant.irrigation.atomic",
+            "world v0.12 規則 crew.base.energy",
+            "world v0.12 規則 crew.base.water",
+            "world v0.12 規則 crew.base.oxygen",
+            "world v0.12 規則 crew.refill.transfer",
+            "world v0.12 規則 crew.task.exclusive",
+            "world v0.12 規則 tick.order",
+            "僅有單 tick 規則算術預檢，沒有未來 Simulator，也沒有執行世界操作。",
+            "規則數值已對照本機 world v0.12；共享發電比例及死亡微順序仍需與世界後端整合驗證。",
+            "科學文獻尚未全面逐項審閱；已檢索不等於已證明建議。",
+            "decision_reason 與 reviews 是模型公開評估；量化效果只以候選核算結果為準。",
+            "本輪 adapter_uncertainties 為空，候選核算亦未列出未知相依條件；核算範圍仍不涵蓋後續刻次。",
+            "較低工作量仍占用四人的任務；後续須由Core安排個人進食與飲水，不能將此候選視為可永久重複的排程。",
+            "本輪使用世界單位比較，未引入科學文獻推估；若另需換算電能，應使用使用者確認的1 EU = 3.9745 kWh = 3974.5 Wh，這不是NASA定義，亦不改變遊戲係數。"
+          ]
+        }
+      },
+      {
+        "message_id": "plant-public-001",
+        "discussion_id": "discussion-example-001",
+        "world_version": 0,
+        "round": 1,
+        "sender": "plant",
+        "recipient": "core",
+        "display_text": "請保留原定農地供應。",
+        "explanation": {
+          "observations": [],
+          "proposals": [
+            {
+              "proposal_id": "plant-keep-supply",
+              "strategy": "保留原定灌溉配額。",
+              "reason": "避免失灌。",
+              "expected_effect": "依既有配額供應，尚未執行。",
+              "tradeoffs": [
+                "需要公共水電。"
+              ],
+              "evidence": [
+                "rules.irrigation"
+              ]
+            }
+          ],
+          "reviews": [],
+          "conflicts": [],
+          "follow_up_reason": "",
+          "decision_reason": "",
+          "uncertainties": []
+        },
+        "content": {
+          "observations": [],
+          "priorities": [],
+          "suggested_actions": [],
+          "acceptable_tradeoffs": [],
+          "evidence_and_unknowns": []
+        }
+      }
+    ],
+    "reason": "initial",
+    "response_guidance": "請在外層 display_text 提供2至4句繁體中文對話：觀察、建議、取捨或不確定性。這是公開理由摘要，不是內部思考鏈；不得聲稱操作已執行。另須提供explanation結構：觀察、各項建議策略／理由／效果／代價／依據、回覆其他建議的評估與不確定性。",
+    "explanation_schema": {
+      "type": "object",
+      "properties": {
+        "observations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "proposals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "proposal_id": {
+                "type": "string"
+              },
+              "strategy": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              },
+              "expected_effect": {
+                "type": "string"
+              },
+              "tradeoffs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "proposal_id",
+              "strategy",
+              "reason",
+              "expected_effect",
+              "tradeoffs",
+              "evidence"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "reviews": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "message_id": {
+                "type": "string"
+              },
+              "proposal_id": {
+                "type": "string"
+              },
+              "disposition": {
+                "type": "string",
+                "enum": [
+                  "accept",
+                  "modify",
+                  "reject",
+                  "needs_clarification"
+                ]
+              },
+              "assessment": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "message_id",
+              "proposal_id",
+              "disposition",
+              "assessment"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "conflicts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "follow_up_reason": {
+          "type": "string"
+        },
+        "decision_reason": {
+          "type": "string"
+        },
+        "uncertainties": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "observations",
+        "proposals",
+        "reviews",
+        "conflicts",
+        "follow_up_reason",
+        "decision_reason",
+        "uncertainties"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "display_text": "請比較原計畫的發電、供水與個人能量耗用；如有合適的替代工作量，先核算再建議。",
+  "message_id": "core-request-human-002",
+  "explanation": {
+    "observations": [],
+    "proposals": [],
+    "reviews": [],
+    "conflicts": [],
+    "follow_up_reason": "Core 要釐清部分發電與飲水的占用衝突，Plant 要求維持灌溉。",
+    "decision_reason": "",
+    "uncertainties": []
+  },
+  "detail_text": "再次討論的原因：initial"
+}

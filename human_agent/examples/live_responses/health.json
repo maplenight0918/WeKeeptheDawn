@@ -1,0 +1,23 @@
+{
+  "status": "ok",
+  "schema_version": "2.0",
+  "world_rules_version": "0.12",
+  "rules_hash": "8cb7fc2c70beb48f7c3f2edec3819f33f4b4968f899b3e9f3eeed504ae4a2e93",
+  "configured_mode": "live",
+  "missing_setting_names": [],
+  "llm": {
+    "provider": "openai_compatible",
+    "model": "gpt-6-astra"
+  },
+  "embedding": {
+    "provider": "openrouter",
+    "model": "voyageai/voyage-4",
+    "dimensions": 1024
+  },
+  "corpus_version": "corpus-4c40231326d1bc2b",
+  "index_version": "index-26765ae220846386",
+  "dense_loaded": true,
+  "bm25_loaded": true,
+  "dense_issue": null,
+  "provider_connectivity": "not_probed"
+}

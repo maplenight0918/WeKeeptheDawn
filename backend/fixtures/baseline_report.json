@@ -1,0 +1,17 @@
+{
+  "ticks": 7200,
+  "alive": 4,
+  "harvested": 1590,
+  "planted": 1589,
+  "resource_minima": {
+    "water": 3000.0,
+    "oxygen": 7716.033333333333,
+    "food": 64680.0,
+    "power": 2886.4000000000024
+  },
+  "personal_minima": {
+    "food_energy": 345.58999999995126,
+    "water": 0.26604166666666773
+  },
+  "note": "Locally measured regression; not an exact reproduction of unavailable historical scripts."
+}

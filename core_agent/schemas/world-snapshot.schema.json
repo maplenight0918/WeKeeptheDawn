@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Core shared world snapshot",
+  "type": "object",
+  "properties": {
+    "world_version": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "world_status": {
+      "type": "string",
+      "enum": [
+        "running",
+        "paused",
+        "planning",
+        "error_paused",
+        "failed"
+      ]
+    },
+    "snapshot_phase": {
+      "type": "string",
+      "enum": [
+        "between_ticks"
+      ]
+    },
+    "rules_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tick": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "resources": {
+      "type": "object",
+      "properties": {
+        "food": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 200000,
+          "description": "公共食物庫存，遊戲 kcal；Food是欄位名稱，不是另一種單位。"
+        },
+        "water": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 4000,
+          "description": "公共水庫存，L。"
+        },
+        "oxygen": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 15000,
+          "description": "公共氧氣庫存，OU。"
+        },
+        "power": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10000,
+          "description": "公共電力庫存，EU。"
+        }
+      },
+      "required": [
+        "food",
+        "water",
+        "oxygen",
+        "power"
+      ],
+      "additionalProperties": false
+    },
+    "crew": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "food_energy": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 3000,
+            "description": "個人能量，遊戲 kcal；與公共food分開。"
+          },
+          "water": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 2,
+            "description": "個人水存量，L；與公共water分開。"
+          },
+          "alive": {
+            "type": "boolean",
+            "description": "必填，由世界後端提供實際存活狀態，不可推測或補預設值。"
+          }
+        },
+        "required": [
+          "id",
+          "food_energy",
+          "water",
+          "alive"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "plots": {
+      "type": "array",
+      "minItems": 20,
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "crop_type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "lettuce",
+              "potato",
+              "tomato",
+              "wheat",
+              "soybean",
+              null
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "empty",
+              "growing",
+              "mature",
+              "dead"
+            ]
+          },
+          "growth_ticks": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 90
+          },
+          "consecutive_unirrigated_ticks": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          }
+        },
+        "required": [
+          "id",
+          "crop_type",
+          "status",
+          "growth_ticks",
+          "consecutive_unirrigated_ticks"
+        ],
+        "additionalProperties": true
+      }
+    }
+  },
+  "required": [
+    "world_version",
+    "world_status",
+    "snapshot_phase",
+    "rules_version",
+    "tick",
+    "resources",
+    "crew",
+    "plots"
+  ],
+  "additionalProperties": true
+}

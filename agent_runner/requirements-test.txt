@@ -1,0 +1,5 @@
+# Install into the isolated Python 3.11+ integration environment.
+-r ../backend/requirements.txt
+numpy>=2.4,<3
+rank-bm25==0.2.2
+pypdf>=6.18,<7

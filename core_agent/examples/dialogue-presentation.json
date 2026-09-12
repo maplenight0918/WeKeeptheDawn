@@ -1,0 +1,117 @@
+{
+  "note": "僅示範對話呈現，非真實GPT輸出或可執行策略；world_version 42不對應初始snapshot。",
+  "messages": [
+    {
+      "discussion_id": "illustrative-discussion",
+      "round": 1,
+      "sender": "plant",
+      "recipient": "core",
+      "world_version": 42,
+      "content": {},
+      "display_text": "我建議先救plot-03，否則下個tick可能失去這批作物。",
+      "message_id": "plant-message",
+      "explanation": {
+        "observations": [
+          "plot-03已連續兩個tick未灌溉。"
+        ],
+        "proposals": [
+          {
+            "proposal_id": "plant-p1",
+            "strategy": "下一tick優先分配plot-03所需的8.7 L水與0.208339030887 EU。",
+            "reason": "再一次灌溉失敗就會死亡，失去已累積的生長進度。",
+            "expected_effect": "成功灌溉後中斷計數歸零，繼續生長與產氧。",
+            "tradeoffs": [
+              "分配給其他地塊的水電減少。"
+            ],
+            "evidence": [
+              "world.plots.plot-03.consecutive_unirrigated_ticks=2",
+              "irrigation.misses_until_death=3"
+            ]
+          }
+        ],
+        "reviews": [],
+        "conflicts": [],
+        "follow_up_reason": "",
+        "decision_reason": "",
+        "uncertainties": []
+      },
+      "detail_text": "觀察：plot-03已連續兩個tick未灌溉。\n建議策略：下一tick優先分配plot-03所需的8.7 L水與0.208339030887 EU。\n原因：再一次灌溉失敗就會死亡，失去已累積的生長進度。\n預期效果：成功灌溉後中斷計數歸零，繼續生長與產氧。\n代價／讓步：分配給其他地塊的水電減少。\n依據：world.plots.plot-03.consecutive_unirrigated_ticks=2\n依據：irrigation.misses_until_death=3"
+    },
+    {
+      "discussion_id": "illustrative-discussion",
+      "round": 1,
+      "sender": "human",
+      "recipient": "core",
+      "world_version": 42,
+      "content": {},
+      "display_text": "兩名crew需要先飲水，當tick不能安排他們發電。",
+      "message_id": "human-message",
+      "explanation": {
+        "observations": [
+          "crew-01與crew-02的個人水已低於0.4 L警戒線。"
+        ],
+        "proposals": [
+          {
+            "proposal_id": "human-p1",
+            "strategy": "下一tick先安排crew-01、crew-02飲水，各最多0.5 L。",
+            "reason": "個人水歸零會死亡，不能只看公共水庫存。",
+            "expected_effect": "在扣除基礎用水前補充個人存量。",
+            "tradeoffs": [
+              "這兩人當tick不能發電。"
+            ],
+            "evidence": [
+              "crew.water warning=0.4 L",
+              "drink occupies one crew-tick"
+            ]
+          }
+        ],
+        "reviews": [],
+        "conflicts": [],
+        "follow_up_reason": "",
+        "decision_reason": "",
+        "uncertainties": []
+      },
+      "detail_text": "觀察：crew-01與crew-02的個人水已低於0.4 L警戒線。\n建議策略：下一tick先安排crew-01、crew-02飲水，各最多0.5 L。\n原因：個人水歸零會死亡，不能只看公共水庫存。\n預期效果：在扣除基礎用水前補充個人存量。\n代價／讓步：這兩人當tick不能發電。\n依據：crew.water warning=0.4 L\n依據：drink occupies one crew-tick"
+    },
+    {
+      "discussion_id": "illustrative-discussion",
+      "round": 1,
+      "sender": "core",
+      "recipient": "all",
+      "world_version": 42,
+      "content": {
+        "plant_question": "減少發電後，哪些地塊可以延後供應或清除？",
+        "human_question": "其餘crew在補充需求下能提供多少工作量？"
+      },
+      "display_text": "我會先安排飲水，但需要再協調灌溉範圍與發電人力。",
+      "message_id": "core-message",
+      "explanation": {
+        "observations": [],
+        "proposals": [],
+        "reviews": [
+          {
+            "message_id": "plant-message",
+            "proposal_id": "plant-p1",
+            "disposition": "needs_clarification",
+            "assessment": "同意救援即將死亡的地塊，但需要確認降低人力發電後可供應多少地塊。"
+          },
+          {
+            "message_id": "human-message",
+            "proposal_id": "human-p1",
+            "disposition": "accept",
+            "assessment": "應先保住兩人的個人水，並將少掉的發電工作納入安排。"
+          }
+        ],
+        "conflicts": [
+          "救援灌溉需要電力，但兩人飲水會減少當tick可用發電人力。"
+        ],
+        "follow_up_reason": "兩方各自建議合理，但還缺少同一tick可執行的水電與人力分配；需請Plant指出可放棄哪些地塊、Human確認其餘crew的工作餘裕。",
+        "decision_reason": "",
+        "uncertainties": [
+          "此例尚未計算完整實際庫存，不能宣稱策略已可行。"
+        ]
+      },
+      "detail_text": "評估建議 plant-p1（需要釐清）：同意救援即將死亡的地塊，但需要確認降低人力發電後可供應多少地塊。\n評估建議 human-p1（採納）：應先保住兩人的個人水，並將少掉的發電工作納入安排。\n衝突：救援灌溉需要電力，但兩人飲水會減少當tick可用發電人力。\n再次討論的原因：兩方各自建議合理，但還缺少同一tick可執行的水電與人力分配；需請Plant指出可放棄哪些地塊、Human確認其餘crew的工作餘裕。\n尚不確定：此例尚未計算完整實際庫存，不能宣稱策略已可行。"
+    }
+  ]
+}

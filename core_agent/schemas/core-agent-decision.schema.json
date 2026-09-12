@@ -1,0 +1,326 @@
+{
+  "type": "object",
+  "properties": {
+    "kind": {
+      "type": "string",
+      "enum": [
+        "consult",
+        "final"
+      ]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "explanation": {
+      "type": "object",
+      "properties": {
+        "observations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "proposals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "proposal_id": {
+                "type": "string"
+              },
+              "strategy": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              },
+              "expected_effect": {
+                "type": "string"
+              },
+              "tradeoffs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "proposal_id",
+              "strategy",
+              "reason",
+              "expected_effect",
+              "tradeoffs",
+              "evidence"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "reviews": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "message_id": {
+                "type": "string"
+              },
+              "proposal_id": {
+                "type": "string"
+              },
+              "disposition": {
+                "type": "string",
+                "enum": [
+                  "accept",
+                  "modify",
+                  "reject",
+                  "needs_clarification"
+                ]
+              },
+              "assessment": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "message_id",
+              "proposal_id",
+              "disposition",
+              "assessment"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "conflicts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "follow_up_reason": {
+          "type": "string"
+        },
+        "decision_reason": {
+          "type": "string"
+        },
+        "uncertainties": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "observations",
+        "proposals",
+        "reviews",
+        "conflicts",
+        "follow_up_reason",
+        "decision_reason",
+        "uncertainties"
+      ],
+      "additionalProperties": false
+    },
+    "plant_question": {
+      "type": "string"
+    },
+    "human_question": {
+      "type": "string"
+    },
+    "plan": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "plan_id": {
+              "type": "string"
+            },
+            "rules_version": {
+              "type": "string"
+            },
+            "based_on_state_version": {
+              "type": "integer"
+            },
+            "reason": {
+              "type": "string"
+            },
+            "entry_stage_id": {
+              "type": "string"
+            },
+            "stages": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "stage_id": {
+                    "type": "string"
+                  },
+                  "purpose": {
+                    "type": "string"
+                  },
+                  "max_ticks": {
+                    "type": "integer"
+                  },
+                  "water_liters_per_tick": {
+                    "type": "number"
+                  },
+                  "irrigation_order": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "actions": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "action_id": {
+                          "type": "string"
+                        },
+                        "crew_id": {
+                          "type": "string"
+                        },
+                        "kind": {
+                          "type": "string",
+                          "enum": [
+                            "eat",
+                            "drink",
+                            "generate",
+                            "plant",
+                            "harvest",
+                            "clear"
+                          ]
+                        },
+                        "tick_offset": {
+                          "type": "integer"
+                        },
+                        "repeat": {
+                          "type": "boolean"
+                        },
+                        "plot_id": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "crop_type": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "amount": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "action_id",
+                        "crew_id",
+                        "kind",
+                        "tick_offset",
+                        "repeat",
+                        "plot_id",
+                        "crop_type",
+                        "amount"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "transitions": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "target_stage_id": {
+                          "type": "string"
+                        },
+                        "match": {
+                          "type": "string",
+                          "enum": [
+                            "all",
+                            "any"
+                          ]
+                        },
+                        "conditions": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "path": {
+                                "type": "string"
+                              },
+                              "op": {
+                                "type": "string",
+                                "enum": [
+                                  "lt",
+                                  "lte",
+                                  "eq",
+                                  "gte",
+                                  "gt"
+                                ]
+                              },
+                              "value": {
+                                "type": "number"
+                              }
+                            },
+                            "required": [
+                              "path",
+                              "op",
+                              "value"
+                            ],
+                            "additionalProperties": false
+                          }
+                        }
+                      },
+                      "required": [
+                        "target_stage_id",
+                        "match",
+                        "conditions"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "required": [
+                  "stage_id",
+                  "purpose",
+                  "max_ticks",
+                  "water_liters_per_tick",
+                  "irrigation_order",
+                  "actions",
+                  "transitions"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "plan_id",
+            "rules_version",
+            "based_on_state_version",
+            "reason",
+            "entry_stage_id",
+            "stages"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "kind",
+    "summary",
+    "explanation",
+    "plant_question",
+    "human_question",
+    "plan"
+  ],
+  "additionalProperties": false
+}

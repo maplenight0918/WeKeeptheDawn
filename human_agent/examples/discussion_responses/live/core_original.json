@@ -1,0 +1,90 @@
+{
+  "message_id": "human-1cd6d1a8558f462bbc55073f2f24e4a2",
+  "discussion_id": "discussion-example-001",
+  "round": 1,
+  "sender": "human",
+  "recipient": "core",
+  "world_version": 0,
+  "display_text": "已完成個人與公共資源分析。本輪提供 0 項供 Core 審核的建議。未提供完整下一 tick 計畫，先回覆狀態與需求分析。",
+  "explanation": {
+    "observations": [
+      "crew-0：存活未知，個人能量 2400 遊戲 kcal，水 1.5 L。",
+      "crew-1：存活未知，個人能量 2400 遊戲 kcal，水 1.5 L。",
+      "crew-2：存活未知，個人能量 2400 遊戲 kcal，水 1.5 L。",
+      "crew-3：存活未知，個人能量 2400 遊戲 kcal，水 1.5 L。",
+      "公共 water：3000 L，庫存標示 normal。",
+      "公共 oxygen：8000 OU，庫存標示 normal。",
+      "公共 food：120000 game_kcal，庫存標示 normal。",
+      "公共 power：6000 EU，庫存標示 normal。",
+      "風險 unknown：對象 整體，項目 integration，階段 next_tick；依據 tick.order。"
+    ],
+    "proposals": [],
+    "reviews": [],
+    "conflicts": [],
+    "follow_up_reason": "",
+    "decision_reason": "四人的個人帳面存量皆為食物能量2400 game_kcal、水1.5 L，均高於提供的警戒值，現況未顯示立即補給警報；但公共食物與水不會自動補入個人存量，Core仍須依個人基礎消耗與預定工作安排補給。公共水3000 L、氧氣8000 OU、電力6000 EU、食物120000 game_kcal亦均高於各自警戒值，但警戒值不是須扣除的保留量，也不能據此保證後續安全。策略上宜先確認個人補給與呼吸需求，再權衡發電及製水：進食、飲水各占用一項工作，發電消耗個人食物能量與公共氧氣，製水消耗公共電力與氧氣，灌溉則須水電同時足額；不可預支尚未完成的收穫，亦不可指望後續植物產氧挽救已耗盡的公共氧氣。此輪沒有基準計畫，因此不自動安排工作、不建立替代完整計畫，也不變更作物占用、灌溉配置或作物操作順序，僅向Core提供上述評估。",
+    "uncertainties": [
+      "僅有單 tick 規則算術預檢，沒有未來 Simulator，也沒有執行世界操作。",
+      "規則數值已對照本機 world v0.12；共享發電比例及死亡微順序仍需與世界後端整合驗證。",
+      "科學文獻尚未全面逐項審閱；已檢索不等於已證明建議。",
+      "decision_reason 與 reviews 是模型公開評估；量化效果只以候選核算結果為準。",
+      "缺少核算資料：crew.crew-0.alive, crew.crew-1.alive, crew.crew-2.alive, crew.crew-3.alive, next_tick_plan, water_production_available；相關結果不推定。",
+      "四人的alive皆為null，存活狀態未知；個人存量評估不等於確認所有人存活。",
+      "next_tick_plan與baseline_audit皆為null，尚無候選稽核，不能宣稱下一刻資源收支、配置可執行性或任務安全已獲驗證。",
+      "water_production_available為null，不能因帳面電力與氧氣充足便認定製水可用。",
+      "adapter_uncertainties為空，未列出額外映射疑義，但不消除快照中明示的未知欄位。",
+      "單位換算採使用者確認的1 EU = 3.9745 kWh = 3974.5 Wh，僅供單位對照，不改變遊戲係數，也不是NASA提供的映射；若比較kW數值，仍須先指定持續時間。"
+    ]
+  },
+  "content": {
+    "observations": [
+      "crew-0：存活未知，個人能量 2400 遊戲 kcal，水 1.5 L。",
+      "crew-1：存活未知，個人能量 2400 遊戲 kcal，水 1.5 L。",
+      "crew-2：存活未知，個人能量 2400 遊戲 kcal，水 1.5 L。",
+      "crew-3：存活未知，個人能量 2400 遊戲 kcal，水 1.5 L。",
+      "公共 water：3000 L，庫存標示 normal。",
+      "公共 oxygen：8000 OU，庫存標示 normal。",
+      "公共 food：120000 game_kcal，庫存標示 normal。",
+      "公共 power：6000 EU，庫存標示 normal。",
+      "風險 unknown：對象 整體，項目 integration，階段 next_tick；依據 tick.order。"
+    ],
+    "priorities": [
+      "優先處理人員存活、吃喝補給與公共氧氣，再比較工作和供水用電。"
+    ],
+    "suggested_actions": [],
+    "acceptable_tradeoffs": [
+      "進食、飲水與作物工作會占用人員；部分發電仍不能同 tick 兼做其他工作。",
+      "降低發電量可減少額外能量與氧氣消耗，也會減少電力產出。"
+    ],
+    "evidence_and_unknowns": [
+      "world v0.12 rules_hash=8cb7fc2c70beb48f7c3f2edec3819f33f4b4968f899b3e9f3eeed504ae4a2e93",
+      "Core rules_version=greenhouse-2026-09-12-v1",
+      "使用者確認換算：1 EU = 3.9745 kWh = 3974.5 Wh；來源 unit_conversion.eu_kwh，非 NASA 認證，不改遊戲係數。",
+      "公共電力 6000 EU 對應 23847 kWh。",
+      "執行模式 live；耗時 22686.62 ms；LLM 呼叫 2 次。",
+      "world v0.12 規則 crew.base.energy",
+      "world v0.12 規則 crew.base.water",
+      "world v0.12 規則 crew.base.oxygen",
+      "world v0.12 規則 crew.personal.death",
+      "world v0.12 規則 crew.refill.transfer",
+      "world v0.12 規則 crew.task.exclusive",
+      "world v0.12 規則 world.oxygen.death",
+      "world v0.12 規則 public.threshold",
+      "world v0.12 規則 generation.proportional",
+      "world v0.12 規則 water_production.conversion",
+      "world v0.12 規則 plant.irrigation.atomic",
+      "world v0.12 規則 plant.harvest",
+      "world v0.12 規則 tick.order",
+      "僅有單 tick 規則算術預檢，沒有未來 Simulator，也沒有執行世界操作。",
+      "規則數值已對照本機 world v0.12；共享發電比例及死亡微順序仍需與世界後端整合驗證。",
+      "科學文獻尚未全面逐項審閱；已檢索不等於已證明建議。",
+      "decision_reason 與 reviews 是模型公開評估；量化效果只以候選核算結果為準。",
+      "缺少核算資料：crew.crew-0.alive, crew.crew-1.alive, crew.crew-2.alive, crew.crew-3.alive, next_tick_plan, water_production_available；相關結果不推定。",
+      "四人的alive皆為null，存活狀態未知；個人存量評估不等於確認所有人存活。",
+      "next_tick_plan與baseline_audit皆為null，尚無候選稽核，不能宣稱下一刻資源收支、配置可執行性或任務安全已獲驗證。",
+      "water_production_available為null，不能因帳面電力與氧氣充足便認定製水可用。",
+      "adapter_uncertainties為空，未列出額外映射疑義，但不消除快照中明示的未知欄位。",
+      "單位換算採使用者確認的1 EU = 3.9745 kWh = 3974.5 Wh，僅供單位對照，不改變遊戲係數，也不是NASA提供的映射；若比較kW數值，仍須先指定持續時間。"
+    ]
+  }
+}

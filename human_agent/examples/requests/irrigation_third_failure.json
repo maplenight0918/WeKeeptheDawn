@@ -1,0 +1,216 @@
+{
+  "schema_version": "2.0",
+  "request_id": "human-irrigation-001",
+  "state_id": "state-0-r1",
+  "world_rules_version": "0.12",
+  "tick": 0,
+  "snapshot_phase": "between_ticks",
+  "world_status": "paused",
+  "resources": {
+    "water": 3000,
+    "oxygen": 8000,
+    "food": 120000,
+    "power": 6000
+  },
+  "crew": [
+    {
+      "id": "crew-1",
+      "alive": true,
+      "food_energy": 2400,
+      "water": 1.5
+    },
+    {
+      "id": "crew-2",
+      "alive": true,
+      "food_energy": 2400,
+      "water": 1.5
+    },
+    {
+      "id": "crew-3",
+      "alive": true,
+      "food_energy": 2400,
+      "water": 1.5
+    },
+    {
+      "id": "crew-4",
+      "alive": true,
+      "food_energy": 2400,
+      "water": 1.5
+    }
+  ],
+  "plots": [
+    {
+      "id": "plot-1",
+      "status": "growing",
+      "crop_type": "lettuce",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 2
+    },
+    {
+      "id": "plot-2",
+      "status": "growing",
+      "crop_type": "lettuce",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-3",
+      "status": "growing",
+      "crop_type": "lettuce",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-4",
+      "status": "growing",
+      "crop_type": "lettuce",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-5",
+      "status": "growing",
+      "crop_type": "potato",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-6",
+      "status": "growing",
+      "crop_type": "potato",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-7",
+      "status": "growing",
+      "crop_type": "potato",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-8",
+      "status": "growing",
+      "crop_type": "potato",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-9",
+      "status": "growing",
+      "crop_type": "tomato",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-10",
+      "status": "growing",
+      "crop_type": "tomato",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-11",
+      "status": "growing",
+      "crop_type": "tomato",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-12",
+      "status": "growing",
+      "crop_type": "tomato",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-13",
+      "status": "growing",
+      "crop_type": "wheat",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-14",
+      "status": "growing",
+      "crop_type": "wheat",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-15",
+      "status": "growing",
+      "crop_type": "wheat",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-16",
+      "status": "growing",
+      "crop_type": "wheat",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-17",
+      "status": "growing",
+      "crop_type": "soybean",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-18",
+      "status": "growing",
+      "crop_type": "soybean",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-19",
+      "status": "growing",
+      "crop_type": "soybean",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    },
+    {
+      "id": "plot-20",
+      "status": "growing",
+      "crop_type": "soybean",
+      "growth_ticks": 0,
+      "consecutive_unirrigated_ticks": 0
+    }
+  ],
+  "water_production_available": true,
+  "next_tick_plan": {
+    "for_tick": 1,
+    "crew_tasks": [
+      {
+        "crew_id": "crew-1",
+        "task": "generate",
+        "work_fraction": 1
+      },
+      {
+        "crew_id": "crew-2",
+        "task": "generate",
+        "work_fraction": 1
+      },
+      {
+        "crew_id": "crew-3",
+        "task": "generate",
+        "work_fraction": 1
+      },
+      {
+        "crew_id": "crew-4",
+        "task": "generate",
+        "work_fraction": 1
+      }
+    ],
+    "refill_order": [],
+    "water_production_request_liters": 174,
+    "irrigation_allocations": [],
+    "crop_operation_order": []
+  },
+  "analysis": {
+    "include_recommendations": true
+  }
+}

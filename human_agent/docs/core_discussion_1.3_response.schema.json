@@ -1,0 +1,257 @@
+{
+  "$defs": {
+    "Explanation": {
+      "additionalProperties": false,
+      "properties": {
+        "observations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Observations",
+          "type": "array"
+        },
+        "proposals": {
+          "items": {
+            "$ref": "#/$defs/PublicProposal"
+          },
+          "title": "Proposals",
+          "type": "array"
+        },
+        "reviews": {
+          "items": {
+            "$ref": "#/$defs/Review"
+          },
+          "title": "Reviews",
+          "type": "array"
+        },
+        "conflicts": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Conflicts",
+          "type": "array"
+        },
+        "follow_up_reason": {
+          "title": "Follow Up Reason",
+          "type": "string"
+        },
+        "decision_reason": {
+          "title": "Decision Reason",
+          "type": "string"
+        },
+        "uncertainties": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Uncertainties",
+          "type": "array"
+        }
+      },
+      "required": [
+        "observations",
+        "proposals",
+        "reviews",
+        "conflicts",
+        "follow_up_reason",
+        "decision_reason",
+        "uncertainties"
+      ],
+      "title": "Explanation",
+      "type": "object"
+    },
+    "PublicProposal": {
+      "additionalProperties": false,
+      "properties": {
+        "proposal_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Proposal Id",
+          "type": "string"
+        },
+        "strategy": {
+          "title": "Strategy",
+          "type": "string"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        },
+        "expected_effect": {
+          "title": "Expected Effect",
+          "type": "string"
+        },
+        "tradeoffs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Tradeoffs",
+          "type": "array"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "proposal_id",
+        "strategy",
+        "reason",
+        "expected_effect",
+        "tradeoffs",
+        "evidence"
+      ],
+      "title": "PublicProposal",
+      "type": "object"
+    },
+    "ReplyContent": {
+      "additionalProperties": false,
+      "properties": {
+        "observations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Observations",
+          "type": "array"
+        },
+        "priorities": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Priorities",
+          "type": "array"
+        },
+        "suggested_actions": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Suggested Actions",
+          "type": "array"
+        },
+        "acceptable_tradeoffs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Acceptable Tradeoffs",
+          "type": "array"
+        },
+        "evidence_and_unknowns": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence And Unknowns",
+          "type": "array"
+        }
+      },
+      "required": [
+        "observations",
+        "priorities",
+        "suggested_actions",
+        "acceptable_tradeoffs",
+        "evidence_and_unknowns"
+      ],
+      "title": "ReplyContent",
+      "type": "object"
+    },
+    "Review": {
+      "additionalProperties": false,
+      "properties": {
+        "message_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Message Id",
+          "type": "string"
+        },
+        "proposal_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Proposal Id",
+          "type": "string"
+        },
+        "disposition": {
+          "enum": [
+            "accept",
+            "modify",
+            "reject",
+            "needs_clarification"
+          ],
+          "title": "Disposition",
+          "type": "string"
+        },
+        "assessment": {
+          "title": "Assessment",
+          "type": "string"
+        }
+      },
+      "required": [
+        "message_id",
+        "proposal_id",
+        "disposition",
+        "assessment"
+      ],
+      "title": "Review",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "message_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "title": "Message Id",
+      "type": "string"
+    },
+    "discussion_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "title": "Discussion Id",
+      "type": "string"
+    },
+    "round": {
+      "maximum": 3,
+      "minimum": 1,
+      "title": "Round",
+      "type": "integer"
+    },
+    "sender": {
+      "const": "human",
+      "default": "human",
+      "title": "Sender",
+      "type": "string"
+    },
+    "recipient": {
+      "const": "core",
+      "default": "core",
+      "title": "Recipient",
+      "type": "string"
+    },
+    "world_version": {
+      "title": "World Version",
+      "type": "integer"
+    },
+    "display_text": {
+      "title": "Display Text",
+      "type": "string"
+    },
+    "explanation": {
+      "$ref": "#/$defs/Explanation"
+    },
+    "content": {
+      "$ref": "#/$defs/ReplyContent"
+    }
+  },
+  "required": [
+    "message_id",
+    "discussion_id",
+    "round",
+    "world_version",
+    "display_text",
+    "explanation",
+    "content"
+  ],
+  "title": "DiscussionReply",
+  "type": "object"
+}

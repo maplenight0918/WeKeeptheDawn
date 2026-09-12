@@ -1,0 +1,37 @@
+{
+  "version": "0.12",
+  "tick_hours": 1,
+  "crew_count": 4,
+  "resources": {
+    "water": {"unit": "L", "initial": 3000, "capacity": 4000, "threshold": 400},
+    "oxygen": {"unit": "OU", "initial": 8000, "capacity": 15000, "threshold": 600},
+    "food": {"unit": "game_kcal", "initial": 120000, "capacity": 200000, "threshold": 12000},
+    "power": {"unit": "EU", "initial": 6000, "capacity": 10000, "threshold": 1000}
+  },
+  "crew": {"daily_energy": "3054", "daily_water": "3.217", "daily_oxygen_kg": "0.895", "food_energy": {"initial": 2400, "capacity": 3000, "threshold": 700, "refill_max": 1000}, "water": {"initial": 1.5, "capacity": 2, "threshold": 0.4, "refill_max": 0.5}},
+  "generation": {"energy": 100, "oxygen": 25, "power": 250, "max_work": 1},
+  "water_production": {"power": 2, "oxygen": 0.2, "limit": 250},
+  "plant": {"plot_count": 20, "area_m2": 5, "water": 8.7, "power": 5, "death_unirrigated_ticks": 3, "background": {"temperature_c": 22, "rh_percent": 65, "co2_ppm": 500, "light_umol_m2_s": 250, "photoperiod_hours": 14, "plants_m2": 27}},
+  "crops": {
+    "lettuce": {"maturity_ticks": 30, "oxygen": 16, "yield_g_m2_day": 19.5, "kcal_g": 0.2, "harvest": 585},
+    "potato": {"maturity_ticks": 90, "oxygen": 16, "yield_g_m2_day": 16.25, "kcal_g": 1.2, "harvest": 8775},
+    "tomato": {"maturity_ticks": 90, "oxygen": 22, "yield_g_m2_day": 13, "kcal_g": 0.3, "harvest": 1755},
+    "wheat": {"maturity_ticks": 90, "oxygen": 10, "yield_g_m2_day": 9.75, "kcal_g": 3, "harvest": 13162.5},
+    "soybean": {"maturity_ticks": 90, "oxygen": 12, "yield_g_m2_day": 6.93, "kcal_g": 3.9, "harvest": 12162.15}
+  },
+  "rule_ids": {
+    "crew.base.energy": {"section": "3.2", "text": "Each living crew consumes 3054/24 = 127.25 game kcal per tick from personal food_energy."},
+    "crew.base.water": {"section": "3.2", "text": "Each living crew consumes 3.217/24 L personal water per tick; this is the fixed game baseline."},
+    "crew.base.oxygen": {"section": "3.2", "text": "Each living crew consumes 0.895*1000/24 OU from public oxygen per tick."},
+    "crew.personal.death": {"section": "3.2", "text": "Personal food_energy or water <= 0 means death; no revival. Any crew death fails the mission."},
+    "crew.refill.transfer": {"section": "3.3", "text": "Transfer min(request, per-action cap, public stock, personal headroom), in Core refill_order. Caps: eat 1000, drink 0.5. No double metabolism charge."},
+    "crew.task.exclusive": {"section": "3.3", "text": "Exactly one occupying task per crew per tick, even when actual refill or work is zero. Core alone decides schedules."},
+    "world.oxygen.death": {"section": "3.1", "text": "Public oxygen <= 0 kills all living crew immediately; later plant oxygen cannot rescue them."},
+    "public.threshold": {"section": "3.1", "text": "Public low thresholds are warnings, not reserves subtracted from stock. Public food, water or power zero does not directly kill crew."},
+    "generation.proportional": {"section": "3.4", "text": "a_i=min(request_i,1,energy_after_base_i/100); A=sum(a_i); W=min(A,oxygen/25,power_headroom/250); w_i=W*a_i/A. Consume 100 personal kcal and 25 public OU per work, produce 250 EU. Exact exhaustion is fatal."},
+    "water_production.conversion": {"section": "3.4", "text": "Actual L=min(request,250,power/2,oxygen/0.2,water_headroom). Consume 2 EU and 0.2 OU per L. Unknown availability stays unknown. This is a game abstraction, not a physical conservation claim."},
+    "plant.irrigation.atomic": {"section": "3.5", "text": "Core orders allocations. A living plot needs full 8.7 L and 5 EU atomically; otherwise neither is deducted and failure counter increases once. Third failure kills plant before harvest. Mature plants still require supply."},
+    "plant.harvest": {"section": "3.5", "text": "Only a successful full-plot harvest adds food, subject to full capacity. Human does not execute crop operations or anticipate harvest credit."},
+    "tick.order": {"section": "3.6", "text": "refill -> base/respiration -> generation -> water_production -> irrigation/oxygen -> crop operations. Stop after any crew death. Human coverage ends before crop operations; not an authoritative world state."}
+  }
+}

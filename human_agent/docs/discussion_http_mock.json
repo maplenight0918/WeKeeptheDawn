@@ -1,0 +1,92 @@
+[
+  {
+    "case": "original_core_request",
+    "http_status": 200,
+    "mode": "mock",
+    "client_elapsed_ms": 3.68,
+    "passed": true
+  },
+  {
+    "round": 1,
+    "http_status": 200,
+    "mode": "mock",
+    "client_elapsed_ms": 6.61,
+    "proposals": 0,
+    "reviews": 0,
+    "passed": true
+  },
+  {
+    "round": 2,
+    "http_status": 200,
+    "mode": "mock",
+    "client_elapsed_ms": 4.82,
+    "proposals": 0,
+    "reviews": 1,
+    "passed": true
+  },
+  {
+    "round": 3,
+    "http_status": 200,
+    "mode": "mock",
+    "client_elapsed_ms": 4.31,
+    "proposals": 0,
+    "reviews": 1,
+    "passed": true
+  },
+  {
+    "case": "current_plan",
+    "http_status": 200,
+    "mode": "mock",
+    "client_elapsed_ms": 3.95,
+    "audit_status": "feasible_in_scope",
+    "passed": true
+  },
+  {
+    "case": "critical",
+    "http_status": 200,
+    "mode": "mock",
+    "client_elapsed_ms": 2.87,
+    "audit_status": "fatal_in_scope",
+    "passed": true
+  },
+  {
+    "case": "oxygen_early",
+    "http_status": 200,
+    "mode": "mock",
+    "client_elapsed_ms": 2.89,
+    "audit_status": "fatal_in_scope",
+    "passed": true
+  },
+  {
+    "case": "refill_competition",
+    "http_status": 200,
+    "mode": "mock",
+    "client_elapsed_ms": 4.84,
+    "audit_status": "feasible_in_scope",
+    "passed": true
+  },
+  {
+    "case": "irrigation_second_failure",
+    "http_status": 200,
+    "mode": "mock",
+    "client_elapsed_ms": 3.65,
+    "audit_status": "feasible_in_scope",
+    "passed": true
+  },
+  {
+    "case": "irrigation_third_failure",
+    "http_status": 200,
+    "mode": "mock",
+    "client_elapsed_ms": 3.76,
+    "audit_status": "unsafe_in_scope",
+    "passed": true
+  },
+  {
+    "case": "already_failed",
+    "http_status": 200,
+    "mode": "mock",
+    "client_elapsed_ms": 2.73,
+    "audit_status": "not_applicable",
+    "passed": true
+  }
+]

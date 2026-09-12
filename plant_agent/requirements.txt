@@ -1,0 +1,7 @@
+# 執行 API 只需要這三個
+numpy
+fastapi
+uvicorn
+
+# 重建 corpus 才需要（pipeline/02_download、03_build 解析 PDF 用）
+# pypdf

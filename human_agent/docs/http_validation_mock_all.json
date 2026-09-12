@@ -1,0 +1,176 @@
+[
+  {
+    "fixture": "normal",
+    "http_status": 200,
+    "execution_mode": "mock",
+    "request_id": "human-normal-001",
+    "state_id": "state-0-r1",
+    "passed": true,
+    "validation_error": null,
+    "retrieval": {
+      "requested_mode": "dense",
+      "actual_mode": "bm25",
+      "fallback_reason": "mock_offline_bm25",
+      "model": null,
+      "dimensions": null,
+      "ranking_method": "bm25"
+    },
+    "diagnostics": {
+      "llm_calls": 0,
+      "embedding_calls": 0,
+      "cache_hits": 0,
+      "elapsed_ms": 3.18,
+      "tool_calls": 1
+    },
+    "tool_names": [
+      "retrieve_evidence"
+    ],
+    "audited_proposals": 0,
+    "warnings": []
+  },
+  {
+    "fixture": "critical",
+    "http_status": 200,
+    "execution_mode": "mock",
+    "request_id": "human-critical-001",
+    "state_id": "state-0-r1",
+    "passed": true,
+    "validation_error": null,
+    "retrieval": {
+      "requested_mode": "dense",
+      "actual_mode": "bm25",
+      "fallback_reason": "mock_offline_bm25",
+      "model": null,
+      "dimensions": null,
+      "ranking_method": "bm25"
+    },
+    "diagnostics": {
+      "llm_calls": 0,
+      "embedding_calls": 0,
+      "cache_hits": 0,
+      "elapsed_ms": 1.48,
+      "tool_calls": 1
+    },
+    "tool_names": [
+      "retrieve_evidence"
+    ],
+    "audited_proposals": 0,
+    "warnings": []
+  },
+  {
+    "fixture": "oxygen_early",
+    "http_status": 200,
+    "execution_mode": "mock",
+    "request_id": "human-oxygen-001",
+    "state_id": "state-0-r1",
+    "passed": true,
+    "validation_error": null,
+    "retrieval": {
+      "requested_mode": "dense",
+      "actual_mode": "bm25",
+      "fallback_reason": "mock_offline_bm25",
+      "model": null,
+      "dimensions": null,
+      "ranking_method": "bm25"
+    },
+    "diagnostics": {
+      "llm_calls": 0,
+      "embedding_calls": 0,
+      "cache_hits": 0,
+      "elapsed_ms": 1.31,
+      "tool_calls": 1
+    },
+    "tool_names": [
+      "retrieve_evidence"
+    ],
+    "audited_proposals": 0,
+    "warnings": []
+  },
+  {
+    "fixture": "refill_competition",
+    "http_status": 200,
+    "execution_mode": "mock",
+    "request_id": "human-refill-001",
+    "state_id": "state-0-r1",
+    "passed": true,
+    "validation_error": null,
+    "retrieval": {
+      "requested_mode": "dense",
+      "actual_mode": "bm25",
+      "fallback_reason": "mock_offline_bm25",
+      "model": null,
+      "dimensions": null,
+      "ranking_method": "bm25"
+    },
+    "diagnostics": {
+      "llm_calls": 0,
+      "embedding_calls": 0,
+      "cache_hits": 0,
+      "elapsed_ms": 2.41,
+      "tool_calls": 1
+    },
+    "tool_names": [
+      "retrieve_evidence"
+    ],
+    "audited_proposals": 0,
+    "warnings": []
+  },
+  {
+    "fixture": "irrigation_third_failure",
+    "http_status": 200,
+    "execution_mode": "mock",
+    "request_id": "human-irrigation-001",
+    "state_id": "state-0-r1",
+    "passed": true,
+    "validation_error": null,
+    "retrieval": {
+      "requested_mode": "dense",
+      "actual_mode": "bm25",
+      "fallback_reason": "mock_offline_bm25",
+      "model": null,
+      "dimensions": null,
+      "ranking_method": "bm25"
+    },
+    "diagnostics": {
+      "llm_calls": 0,
+      "embedding_calls": 0,
+      "cache_hits": 0,
+      "elapsed_ms": 2.13,
+      "tool_calls": 1
+    },
+    "tool_names": [
+      "retrieve_evidence"
+    ],
+    "audited_proposals": 0,
+    "warnings": []
+  },
+  {
+    "fixture": "partial",
+    "http_status": 200,
+    "execution_mode": "mock",
+    "request_id": "human-partial-001",
+    "state_id": "state-0-r1",
+    "passed": true,
+    "validation_error": null,
+    "retrieval": {
+      "requested_mode": "dense",
+      "actual_mode": "bm25",
+      "fallback_reason": "mock_offline_bm25",
+      "model": null,
+      "dimensions": null,
+      "ranking_method": "bm25"
+    },
+    "diagnostics": {
+      "llm_calls": 0,
+      "embedding_calls": 0,
+      "cache_hits": 0,
+      "elapsed_ms": 1.09,
+      "tool_calls": 1
+    },
+    "tool_names": [
+      "retrieve_evidence"
+    ],
+    "audited_proposals": 0,
+    "warnings": []
+  }
+]

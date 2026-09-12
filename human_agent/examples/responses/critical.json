@@ -1,0 +1,881 @@
+{
+  "schema_version": "2.0",
+  "request_id": "human-critical-001",
+  "state_id": "state-0-r1",
+  "tick": 0,
+  "for_tick": 1,
+  "world_rules_version": "0.12",
+  "rules_hash": "8cb7fc2c70beb48f7c3f2edec3819f33f4b4968f899b3e9f3eeed504ae4a2e93",
+  "analysis_status": "complete",
+  "execution_mode": "mock",
+  "current_world_condition": "active",
+  "crew_assessments": [
+    {
+      "crew_id": "crew-1",
+      "alive": true,
+      "food_energy": 100.0,
+      "water": 0.1,
+      "energy_ratio": 0.03333333333333333,
+      "water_ratio": 0.05,
+      "low_flags": {
+        "food_energy": true,
+        "water": true
+      },
+      "idle_no_refill": {
+        "energy": {
+          "status": "known",
+          "continuous_margin_ticks": 0.7858546168958742,
+          "first_fatal_tick_offset": 1,
+          "safe_complete_ticks": 0,
+          "assumptions": [
+            "Idle, no refill."
+          ]
+        },
+        "water": {
+          "status": "known",
+          "continuous_margin_ticks": 0.7460366801367734,
+          "first_fatal_tick_offset": 1,
+          "safe_complete_ticks": 0,
+          "assumptions": [
+            "No drinking."
+          ]
+        },
+        "energy_rate": 127.25,
+        "water_rate": 0.13404166666666667
+      },
+      "requested_work_no_refill": {
+        "energy": {
+          "status": "known",
+          "continuous_margin_ticks": 0.7858546168958742,
+          "first_fatal_tick_offset": 1,
+          "safe_complete_ticks": 0,
+          "assumptions": [
+            "Fixed requested work each tick, shared oxygen/power headroom sufficient; hypothetical."
+          ]
+        },
+        "water": {
+          "status": "known",
+          "continuous_margin_ticks": 0.7460366801367734,
+          "first_fatal_tick_offset": 1,
+          "safe_complete_ticks": 0,
+          "assumptions": [
+            "No drinking; generation adds no extra water demand."
+          ]
+        },
+        "energy_rate": 127.25,
+        "water_rate": 0.13404166666666667
+      },
+      "after_refill": {
+        "food_energy": 1100.0,
+        "water": 0.1
+      },
+      "after_base": null,
+      "actual_work": null,
+      "fatal_conditions": [
+        {
+          "entity_id": "crew-1",
+          "resource": "water",
+          "phase": "base",
+          "trigger_values": {
+            "stock": 0.1,
+            "required": 0.13404166666666667
+          },
+          "rule_ids": [
+            "crew.personal.death"
+          ]
+        }
+      ]
+    },
+    {
+      "crew_id": "crew-2",
+      "alive": true,
+      "food_energy": 2400.0,
+      "water": 1.5,
+      "energy_ratio": 0.8,
+      "water_ratio": 0.75,
+      "low_flags": {
+        "food_energy": false,
+        "water": false
+      },
+      "idle_no_refill": {
+        "energy": {
+          "status": "known",
+          "continuous_margin_ticks": 18.860510805500983,
+          "first_fatal_tick_offset": 19,
+          "safe_complete_ticks": 18,
+          "assumptions": [
+            "Idle, no refill."
+          ]
+        },
+        "water": {
+          "status": "known",
+          "continuous_margin_ticks": 11.1905502020516,
+          "first_fatal_tick_offset": 12,
+          "safe_complete_ticks": 11,
+          "assumptions": [
+            "No drinking."
+          ]
+        },
+        "energy_rate": 127.25,
+        "water_rate": 0.13404166666666667
+      },
+      "requested_work_no_refill": {
+        "energy": {
+          "status": "known",
+          "continuous_margin_ticks": 10.561056105610561,
+          "first_fatal_tick_offset": 11,
+          "safe_complete_ticks": 10,
+          "assumptions": [
+            "Fixed requested work each tick, shared oxygen/power headroom sufficient; hypothetical."
+          ]
+        },
+        "water": {
+          "status": "known",
+          "continuous_margin_ticks": 11.1905502020516,
+          "first_fatal_tick_offset": 12,
+          "safe_complete_ticks": 11,
+          "assumptions": [
+            "No drinking; generation adds no extra water demand."
+          ]
+        },
+        "energy_rate": 227.25,
+        "water_rate": 0.13404166666666667
+      },
+      "after_refill": {
+        "food_energy": 2400.0,
+        "water": 1.5
+      },
+      "after_base": null,
+      "actual_work": null,
+      "fatal_conditions": []
+    },
+    {
+      "crew_id": "crew-3",
+      "alive": true,
+      "food_energy": 2400.0,
+      "water": 1.5,
+      "energy_ratio": 0.8,
+      "water_ratio": 0.75,
+      "low_flags": {
+        "food_energy": false,
+        "water": false
+      },
+      "idle_no_refill": {
+        "energy": {
+          "status": "known",
+          "continuous_margin_ticks": 18.860510805500983,
+          "first_fatal_tick_offset": 19,
+          "safe_complete_ticks": 18,
+          "assumptions": [
+            "Idle, no refill."
+          ]
+        },
+        "water": {
+          "status": "known",
+          "continuous_margin_ticks": 11.1905502020516,
+          "first_fatal_tick_offset": 12,
+          "safe_complete_ticks": 11,
+          "assumptions": [
+            "No drinking."
+          ]
+        },
+        "energy_rate": 127.25,
+        "water_rate": 0.13404166666666667
+      },
+      "requested_work_no_refill": {
+        "energy": {
+          "status": "known",
+          "continuous_margin_ticks": 10.561056105610561,
+          "first_fatal_tick_offset": 11,
+          "safe_complete_ticks": 10,
+          "assumptions": [
+            "Fixed requested work each tick, shared oxygen/power headroom sufficient; hypothetical."
+          ]
+        },
+        "water": {
+          "status": "known",
+          "continuous_margin_ticks": 11.1905502020516,
+          "first_fatal_tick_offset": 12,
+          "safe_complete_ticks": 11,
+          "assumptions": [
+            "No drinking; generation adds no extra water demand."
+          ]
+        },
+        "energy_rate": 227.25,
+        "water_rate": 0.13404166666666667
+      },
+      "after_refill": {
+        "food_energy": 2400.0,
+        "water": 1.5
+      },
+      "after_base": null,
+      "actual_work": null,
+      "fatal_conditions": []
+    },
+    {
+      "crew_id": "crew-4",
+      "alive": true,
+      "food_energy": 2400.0,
+      "water": 1.5,
+      "energy_ratio": 0.8,
+      "water_ratio": 0.75,
+      "low_flags": {
+        "food_energy": false,
+        "water": false
+      },
+      "idle_no_refill": {
+        "energy": {
+          "status": "known",
+          "continuous_margin_ticks": 18.860510805500983,
+          "first_fatal_tick_offset": 19,
+          "safe_complete_ticks": 18,
+          "assumptions": [
+            "Idle, no refill."
+          ]
+        },
+        "water": {
+          "status": "known",
+          "continuous_margin_ticks": 11.1905502020516,
+          "first_fatal_tick_offset": 12,
+          "safe_complete_ticks": 11,
+          "assumptions": [
+            "No drinking."
+          ]
+        },
+        "energy_rate": 127.25,
+        "water_rate": 0.13404166666666667
+      },
+      "requested_work_no_refill": {
+        "energy": {
+          "status": "known",
+          "continuous_margin_ticks": 10.561056105610561,
+          "first_fatal_tick_offset": 11,
+          "safe_complete_ticks": 10,
+          "assumptions": [
+            "Fixed requested work each tick, shared oxygen/power headroom sufficient; hypothetical."
+          ]
+        },
+        "water": {
+          "status": "known",
+          "continuous_margin_ticks": 11.1905502020516,
+          "first_fatal_tick_offset": 12,
+          "safe_complete_ticks": 11,
+          "assumptions": [
+            "No drinking; generation adds no extra water demand."
+          ]
+        },
+        "energy_rate": 227.25,
+        "water_rate": 0.13404166666666667
+      },
+      "after_refill": {
+        "food_energy": 2400.0,
+        "water": 1.5
+      },
+      "after_base": null,
+      "actual_work": null,
+      "fatal_conditions": []
+    }
+  ],
+  "public_resource_assessment": {
+    "water": {
+      "stock": 3000.0,
+      "capacity": 4000,
+      "threshold": 400,
+      "unit": "L",
+      "status": "normal"
+    },
+    "oxygen": {
+      "stock": 8000.0,
+      "capacity": 15000,
+      "threshold": 600,
+      "unit": "OU",
+      "status": "normal"
+    },
+    "food": {
+      "stock": 120000.0,
+      "capacity": 200000,
+      "threshold": 12000,
+      "unit": "game_kcal",
+      "status": "normal"
+    },
+    "power": {
+      "stock": 6000.0,
+      "capacity": 10000,
+      "threshold": 1000,
+      "unit": "EU",
+      "status": "normal",
+      "energy_equivalent": {
+        "kwh": 23847.0,
+        "kwh_per_eu": 3.9745,
+        "source": "unit_conversion.eu_kwh"
+      }
+    },
+    "base_demand_per_tick": {
+      "food_energy": 509.0,
+      "personal_water": 0.5361666666666667,
+      "public_oxygen": 149.16666666666666
+    },
+    "oxygen_respiration_only": {
+      "continuous_margin_ticks": 53.63128491620112,
+      "first_fatal_tick_offset": 54,
+      "safe_complete_ticks": 53,
+      "assumptions": [
+        "Respiration only; excludes generation, water production and plant oxygen."
+      ],
+      "status": "known"
+    },
+    "plant_supply_pressure": {
+      "active_plots": 20,
+      "full_supply_water": 174.0,
+      "full_supply_power": 100.0,
+      "full_supply_oxygen": 304,
+      "steady_rate_reference": {
+        "water_production_liters": 174.53616666666667,
+        "plant_plus_water_power": 449.07233333333335,
+        "assumption": "Average replacement including personal base water; not actual discrete drinking or a schedule."
+      }
+    }
+  },
+  "workforce_summary": {
+    "task_counts": {
+      "eat": 1,
+      "generate": 3
+    },
+    "refill_occupied": 1,
+    "crop_occupied": 0,
+    "generation_requested_crew": 3,
+    "requested_total_work": 3.0,
+    "requested_generation_upper_bound_eu": 750.0,
+    "actual_total_work": null,
+    "actual_power_produced": null,
+    "one_tick_all_crew_upper_bound_eu": 1000,
+    "assumption": "Upper bound only; excludes occupation and shared resource constraints."
+  },
+  "next_tick_audit": {
+    "result_id": "audit-455f5f7426b9abf6",
+    "status": "fatal_in_scope",
+    "scope": "hypothetical_single_tick_human_preflight",
+    "for_tick": 1,
+    "coverage_end": "after_base",
+    "fatal_stage": "base",
+    "stage_results": {
+      "refill": {
+        "status": "evaluated",
+        "details": {
+          "transfers": [
+            {
+              "crew_id": "crew-1",
+              "resource": "food_energy",
+              "requested": 1000.0,
+              "actual": 1000.0,
+              "capacity_limited": false,
+              "stock_limited": false
+            }
+          ],
+          "crew_after": {
+            "crew-1": {
+              "food_energy": 1100.0,
+              "water": 0.1
+            },
+            "crew-2": {
+              "food_energy": 2400.0,
+              "water": 1.5
+            },
+            "crew-3": {
+              "food_energy": 2400.0,
+              "water": 1.5
+            },
+            "crew-4": {
+              "food_energy": 2400.0,
+              "water": 1.5
+            }
+          }
+        }
+      },
+      "base": {
+        "status": "evaluated",
+        "details": {
+          "crew_after": null,
+          "respiration": 149.16666666666666,
+          "public_oxygen_after": null,
+          "fatal_conditions": [
+            {
+              "entity_id": "crew-1",
+              "resource": "water",
+              "phase": "base",
+              "trigger_values": {
+                "stock": 0.1,
+                "required": 0.13404166666666667
+              },
+              "rule_ids": [
+                "crew.personal.death"
+              ]
+            }
+          ]
+        }
+      },
+      "generation": {
+        "status": "not_reached",
+        "details": {}
+      },
+      "water_production": {
+        "status": "not_reached",
+        "details": {}
+      },
+      "irrigation": {
+        "status": "not_reached",
+        "details": {}
+      },
+      "crop_operations": {
+        "status": "not_reached",
+        "details": {}
+      }
+    },
+    "ledger": [
+      {
+        "phase": "refill",
+        "kind": "transfer",
+        "resource": "food",
+        "entity_id": "crew-1",
+        "amount": 1000.0
+      }
+    ],
+    "known_after_values": null,
+    "fatal_conditions": [
+      {
+        "entity_id": "crew-1",
+        "resource": "water",
+        "phase": "base",
+        "trigger_values": {
+          "stock": 0.1,
+          "required": 0.13404166666666667
+        },
+        "rule_ids": [
+          "crew.personal.death"
+        ]
+      }
+    ],
+    "unknown_dependencies": [],
+    "limitations": [
+      "Read-only hypothetical accounting; never an authoritative world state.",
+      "Stops before crop operations; no harvest, planting, clock advance or future yield simulation.",
+      "Fatal phase micro-order is unspecified; no terminal complete state is published."
+    ]
+  },
+  "risks": [
+    {
+      "id": "risk-1",
+      "severity": "warning",
+      "impact_domain": "human",
+      "entity_id": "crew-1",
+      "resource": "food_energy",
+      "phase": "current",
+      "tick_offset": 0,
+      "description": "Personal stock below low threshold.",
+      "trigger_values": {},
+      "rule_ids": [
+        "crew.personal.death"
+      ],
+      "evidence_ids": []
+    },
+    {
+      "id": "risk-2",
+      "severity": "warning",
+      "impact_domain": "human",
+      "entity_id": "crew-1",
+      "resource": "water",
+      "phase": "current",
+      "tick_offset": 0,
+      "description": "Personal stock below low threshold.",
+      "trigger_values": {},
+      "rule_ids": [
+        "crew.personal.death"
+      ],
+      "evidence_ids": []
+    },
+    {
+      "id": "risk-3",
+      "severity": "critical",
+      "impact_domain": "human",
+      "entity_id": "crew-1",
+      "resource": "food_energy_and_water",
+      "phase": "base",
+      "tick_offset": 1,
+      "description": "No feasible refill within this action space: one crew cannot eat and drink in the same tick.",
+      "trigger_values": {},
+      "rule_ids": [
+        "crew.task.exclusive",
+        "crew.personal.death"
+      ],
+      "evidence_ids": []
+    },
+    {
+      "id": "risk-4",
+      "severity": "critical",
+      "impact_domain": "human",
+      "entity_id": "crew-1",
+      "resource": "water",
+      "phase": "base",
+      "tick_offset": 1,
+      "description": "Current failure or known fatal consumption; later production cannot rescue this phase.",
+      "trigger_values": {
+        "stock": 0.1,
+        "required": 0.13404166666666667
+      },
+      "rule_ids": [
+        "crew.personal.death"
+      ],
+      "evidence_ids": []
+    },
+    {
+      "id": "risk-5",
+      "severity": "warning",
+      "impact_domain": "human",
+      "entity_id": null,
+      "resource": null,
+      "phase": "generation",
+      "tick_offset": 1,
+      "description": "Refill/crop occupation reduces available generators.",
+      "trigger_values": {},
+      "rule_ids": [
+        "crew.task.exclusive"
+      ],
+      "evidence_ids": []
+    }
+  ],
+  "recommendations": [
+    {
+      "proposal_id": "mock-refill-review",
+      "proposal_kind": "reserve_crew_for_refill",
+      "target_crew_ids": [
+        "crew-1"
+      ],
+      "proposed_changes": {},
+      "reason": "Request Core coordination of refill occupation: each crew can perform only one occupying task per tick. No complete candidate has been audited; no quantitative effect is verified.",
+      "constraints": [
+        "Core must recheck state_id/tick and approve; no actions executed.",
+        "Reason is assembled from fixed rules and backend audit; free-form LLM prose is not published as a factual explanation.",
+        "Scientific citations are context. Only evidence.reviewed_claims have a bounded source-text review; other claims remain unverified."
+      ],
+      "coordination_needed": true,
+      "feasibility": "unverified",
+      "rule_ids": [
+        "crew.task.exclusive",
+        "crew.refill.transfer"
+      ],
+      "evidence_ids": [],
+      "audit_result_id": null,
+      "expected_effect": null
+    }
+  ],
+  "human_requests_to_core": [
+    {
+      "crew_id": "crew-1",
+      "request": "review_refill_and_work",
+      "low_flags": {
+        "food_energy": true,
+        "water": true
+      },
+      "coordination_needed": false,
+      "approved": false
+    }
+  ],
+  "evidence": [
+    {
+      "id": "crew.base.energy",
+      "type": "world_rule",
+      "title": "crew.base.energy",
+      "document_id": "world_rules_v0.12",
+      "chunk_id": null,
+      "rule_id": "crew.base.energy",
+      "locator": "spec.md 3.2",
+      "source_url": null,
+      "excerpt": "Each living crew consumes 3054/24 = 127.25 game kcal per tick from personal food_energy.",
+      "verification_status": "world_defined",
+      "reviewed_claims": []
+    },
+    {
+      "id": "crew.base.water",
+      "type": "world_rule",
+      "title": "crew.base.water",
+      "document_id": "world_rules_v0.12",
+      "chunk_id": null,
+      "rule_id": "crew.base.water",
+      "locator": "spec.md 3.2",
+      "source_url": null,
+      "excerpt": "Each living crew consumes 3.217/24 L personal water per tick; this is the fixed game baseline.",
+      "verification_status": "world_defined",
+      "reviewed_claims": []
+    },
+    {
+      "id": "crew.base.oxygen",
+      "type": "world_rule",
+      "title": "crew.base.oxygen",
+      "document_id": "world_rules_v0.12",
+      "chunk_id": null,
+      "rule_id": "crew.base.oxygen",
+      "locator": "spec.md 3.2",
+      "source_url": null,
+      "excerpt": "Each living crew consumes 0.895*1000/24 OU from public oxygen per tick.",
+      "verification_status": "world_defined",
+      "reviewed_claims": []
+    },
+    {
+      "id": "crew.personal.death",
+      "type": "world_rule",
+      "title": "crew.personal.death",
+      "document_id": "world_rules_v0.12",
+      "chunk_id": null,
+      "rule_id": "crew.personal.death",
+      "locator": "spec.md 3.2",
+      "source_url": null,
+      "excerpt": "Personal food_energy or water <= 0 means death; no revival. Any crew death fails the mission.",
+      "verification_status": "world_defined",
+      "reviewed_claims": []
+    },
+    {
+      "id": "crew.refill.transfer",
+      "type": "world_rule",
+      "title": "crew.refill.transfer",
+      "document_id": "world_rules_v0.12",
+      "chunk_id": null,
+      "rule_id": "crew.refill.transfer",
+      "locator": "spec.md 3.3",
+      "source_url": null,
+      "excerpt": "Transfer min(request, per-action cap, public stock, personal headroom), in Core refill_order. Caps: eat 1000, drink 0.5. No double metabolism charge.",
+      "verification_status": "world_defined",
+      "reviewed_claims": []
+    },
+    {
+      "id": "crew.task.exclusive",
+      "type": "world_rule",
+      "title": "crew.task.exclusive",
+      "document_id": "world_rules_v0.12",
+      "chunk_id": null,
+      "rule_id": "crew.task.exclusive",
+      "locator": "spec.md 3.3",
+      "source_url": null,
+      "excerpt": "Exactly one occupying task per crew per tick, even when actual refill or work is zero. Core alone decides schedules.",
+      "verification_status": "world_defined",
+      "reviewed_claims": []
+    },
+    {
+      "id": "world.oxygen.death",
+      "type": "world_rule",
+      "title": "world.oxygen.death",
+      "document_id": "world_rules_v0.12",
+      "chunk_id": null,
+      "rule_id": "world.oxygen.death",
+      "locator": "spec.md 3.1",
+      "source_url": null,
+      "excerpt": "Public oxygen <= 0 kills all living crew immediately; later plant oxygen cannot rescue them.",
+      "verification_status": "world_defined",
+      "reviewed_claims": []
+    },
+    {
+      "id": "public.threshold",
+      "type": "world_rule",
+      "title": "public.threshold",
+      "document_id": "world_rules_v0.12",
+      "chunk_id": null,
+      "rule_id": "public.threshold",
+      "locator": "spec.md 3.1",
+      "source_url": null,
+      "excerpt": "Public low thresholds are warnings, not reserves subtracted from stock. Public food, water or power zero does not directly kill crew.",
+      "verification_status": "world_defined",
+      "reviewed_claims": []
+    },
+    {
+      "id": "generation.proportional",
+      "type": "world_rule",
+      "title": "generation.proportional",
+      "document_id": "world_rules_v0.12",
+      "chunk_id": null,
+      "rule_id": "generation.proportional",
+      "locator": "spec.md 3.4",
+      "source_url": null,
+      "excerpt": "a_i=min(request_i,1,energy_after_base_i/100); A=sum(a_i); W=min(A,oxygen/25,power_headroom/250); w_i=W*a_i/A. Consume 100 personal kcal and 25 public OU per work, produce 250 EU. Exact exhaustion is fatal.",
+      "verification_status": "world_defined",
+      "reviewed_claims": []
+    },
+    {
+      "id": "water_production.conversion",
+      "type": "world_rule",
+      "title": "water_production.conversion",
+      "document_id": "world_rules_v0.12",
+      "chunk_id": null,
+      "rule_id": "water_production.conversion",
+      "locator": "spec.md 3.4",
+      "source_url": null,
+      "excerpt": "Actual L=min(request,250,power/2,oxygen/0.2,water_headroom). Consume 2 EU and 0.2 OU per L. Unknown availability stays unknown. This is a game abstraction, not a physical conservation claim.",
+      "verification_status": "world_defined",
+      "reviewed_claims": []
+    },
+    {
+      "id": "plant.irrigation.atomic",
+      "type": "world_rule",
+      "title": "plant.irrigation.atomic",
+      "document_id": "world_rules_v0.12",
+      "chunk_id": null,
+      "rule_id": "plant.irrigation.atomic",
+      "locator": "spec.md 3.5",
+      "source_url": null,
+      "excerpt": "Core orders allocations. A living plot needs full 8.7 L and 5 EU atomically; otherwise neither is deducted and failure counter increases once. Third failure kills plant before harvest. Mature plants still require supply.",
+      "verification_status": "world_defined",
+      "reviewed_claims": []
+    },
+    {
+      "id": "plant.harvest",
+      "type": "world_rule",
+      "title": "plant.harvest",
+      "document_id": "world_rules_v0.12",
+      "chunk_id": null,
+      "rule_id": "plant.harvest",
+      "locator": "spec.md 3.5",
+      "source_url": null,
+      "excerpt": "Only a successful full-plot harvest adds food, subject to full capacity. Human does not execute crop operations or anticipate harvest credit.",
+      "verification_status": "world_defined",
+      "reviewed_claims": []
+    },
+    {
+      "id": "tick.order",
+      "type": "world_rule",
+      "title": "tick.order",
+      "document_id": "world_rules_v0.12",
+      "chunk_id": null,
+      "rule_id": "tick.order",
+      "locator": "spec.md 3.6",
+      "source_url": null,
+      "excerpt": "refill -> base/respiration -> generation -> water_production -> irrigation/oxygen -> crop operations. Stop after any crew death. Human coverage ends before crop operations; not an authoritative world state.",
+      "verification_status": "world_defined",
+      "reviewed_claims": []
+    },
+    {
+      "id": "unit_conversion.eu_kwh",
+      "type": "implementation_assumption",
+      "title": "User-confirmed EU energy conversion",
+      "document_id": "unit_conversions",
+      "chunk_id": null,
+      "rule_id": null,
+      "locator": "data/unit_conversions.json",
+      "source_url": null,
+      "excerpt": "User confirmed 1 EU = 3.9745 kWh = 3974.5 Wh. EU = kWh / 3.9745. kW is power, not energy; duration is required. Game conversion coefficients remain unchanged.",
+      "verification_status": "user_confirmed",
+      "reviewed_claims": []
+    },
+    {
+      "id": "bvad_2022-p72-0-72b803e99f",
+      "type": "scientific_source",
+      "title": "Life Support Baseline Values and Assumptions Document, Rev 2",
+      "document_id": "bvad_2022",
+      "chunk_id": "bvad_2022-p72-0-72b803e99f",
+      "rule_id": null,
+      "locator": "PDF physical page 72; original page; printed page not transcribed",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "excerpt": "Life Support Baseline Values and Assumptions Document , NASA/TP-2015-218570, Rev2                                                                                                                                                                                                                                                                                                                                                                                                                                                                               February 2022\n\n     3.3.5                                           NOMINAL HUMAN INTERFACES\n             Nominal balances of major life support commodities are summarized in  Table 3-31, for a standard 82 kg\ncrewmember with a respiratory quotient   of 0.86  76 during intravehicular activities.  The balance includes a rigorous\ndaily exercise regimen which includes 30 minutes of aerobic and 60 minutes of resistance training.  Masses\nconsumed by the crewmember are denoted by “+ m,” while masses rejected by the crewmember are denoted by\n“- m.”  Likewise, energy entering the crewmember is denoted by “+ E,” while energy rejected by the crewmember\nis denoted by “- E.”   Actual values depend on many factors, including physical workload, diet, and individual\nmetabolism. This balance uses inputs and outputs from 2019 runs of an updated MetMan model  (Ewert, et al.,\n2021) which are correlated to 2018 “sweat test” results (Crowell, J.B. 2018). The assumptions, sources, and\nrationale for Table 3-31 are discussed below in the order of their appearance in the table. Figure 3-4 shows a\ngraphical representation of the mass inputs and outputs given in   Table 3-31.\n\nTable 3-31                                                               Summary of Nominal Human Metabolic Interface Values\n\n   Balance                                 Interface                                  Units             Nominal                   References\n                                                                                                          Value                   1.                                   Ewert (2019)\n                      Basis                                                                                                       2.     NASA HIDH (2014)\n                                                                                                                                  3.                                   Ewert (2021)\n                      Overall Body Mass                                              kg/CM               82 (1)-(3 )              4.                                    Crowell (2018)\n                      Respiratory Quotient                                                             0.860 (3),(4)              5.                                    Rose (2015)\n                      Air\n         m           Carbon Dioxide Load                                           kg/CM-d            1.085 (1),(3)\n       + m            Oxygen Consumed                                               kg/CM-d            0.895 (1),(3)\n                      Food & Drink\n       + m            Food Solids; Mass (without                                    kg/CM-d              0.800  (1)\n                      packaging)\n       +  E           Food Consumed; Energy Content                                 MJ/CM-d           12.778 (1),(3)\n       + m            Potable Water Content                                         kg/CM-d            3.217 (1),(2)\n       + m            Water in Food Prior to Rehydration                            kg/CM-d            0.760 (1),(2)\n                      Metabolic Water                                               kg/CM-d                0.490\n                      Thermal\n         E           Total Metabolic Heat Load                                     MJ/CM-d           12.426 (1),(3)\n                      Sensible Metabolic Heat Load                                  MJ/CM-d            6.308 (1),(3)\n                      Latent Metabolic Heat Load                                    MJ/CM-d            6.118 (1),(3)\n                      Solid Waste\n         m           Fecal Solid Waste (dry basis)                                kg/CM-d               0.032 (5)\n         m           Perspiration & misc. Solid Waste                              kg/CM-d              0.027  (1)\n                      (dry basis)\n          m          Urine Solid Waste (dry basis)                                 kg/CM-d              0.061 (5)\n                      Wastewater\n         m           Fecal Water                                                   kg/CM-d              0.101 (5)\n         m           Respiration and Perspiration Water                            kg/CM-d              2.946 (3)\n         m           Urine Water                                                   kg/CM-d              1.420 (5)\n\nOverall Body Mass: An 82 kg/CM reference astronaut who is eating and  exercising well (30 minutes of aerobic\nand 60 minutes of resistive exercise per day) in order to maintain constant body mass and health during an extended\n\n76                                         The respiratory quotient (RQ) is defined as the ratio of exhaled carbon dioxide to inhaled oxygen. Section 3.3.2.1 provides\n      more detail on RQ and its var iations with diet and physical activity.\n\n                                                                                      58",
+      "verification_status": "full_text_acquired_support_not_automatically_verified",
+      "reviewed_claims": [
+        "BVAD Rev2 Table 3-31 lists nominal food energy 12.778 MJ/CM-d, potable water 3.217 kg/CM-d, and oxygen consumption 0.895 kg/CM-d.",
+        "The nominal reference is an 82 kg crewmember during IVA, with 30 minutes aerobic and 60 minutes resistance exercise daily; actual needs vary with workload, diet and metabolism."
+      ]
+    },
+    {
+      "id": "nutrition_requirements-p11-0-f8f7cf4a51",
+      "type": "scientific_source",
+      "title": "Nutrition Requirements, Standards, and Operating Bands for Exploration Missions",
+      "document_id": "nutrition_requirements",
+      "chunk_id": "nutrition_requirements-p11-0-f8f7cf4a51",
+      "rule_id": null,
+      "locator": "PDF physical page 11; original page; printed page not transcribed",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20200001703/downloads/20200001703.pdf",
+      "excerpt": "It is imperative that adequate resources be provided to support food consumption.  A\nreliable food system must include a variety of palatable foods and the means to\nprocess them (such as rehydration, heating, and cooling).  Time (for meal\npreparation, consumption, and clean-up) is another limited resource that often\nhinders dietary intake.\n\nInitial plans for the ISS included the use of freezers and refrigerators for food storage\nand preparation.  This would have provided a more palatable food system, which\nwould serve to increase dietary intake, as well as provide added psychological\nsupport.  It is often difficult to balance the intangible potential increase in dietary\nintake and psychological support against a tangible dollar and power allocation, both\nof which are typically (if not always) constrained.\n\nAltered energy expenditure is a commonly proposed explanation for loss of body\nmass.  According to early hypotheses, energy expenditure during flight would be less\nthan on the ground, because of the relative  hypokinesia in space (19).  Lower energy\nexpenditure was observed during extravehicular activity on the lunar surface\ncompared with similar activities at 1 g (36).  However, studies of inflight, non-EVA\nenergy expenditure of Space Shuttle crew members showed that inflight energy\nexpenditure was unchanged from preflight levels (2).  More recent studies have even\nshown increased energy expenditure during flight compared to preflight levels, most\nlikely as a result of increased exercise (6).   These studies involved Shuttle astronauts\nand indirect calorimetry techniques to  determine total energy expenditure over\nseveral days.  The doubly-labeled water (water enriched with deuterium and 18O)\ntechnique was used to determine oxygen consumption (37).  The benefits of this\ntechnique are that it is non-invasive and it  takes into account th e energy cost of all\nactivities over several days.  The drawback of the method is that information about\nthe individual components of total energy  expenditure (such as resting, sleep,\nexercise) is not available.\n\nAlthough it is assumed that less energy is expended moving the body mass around the\ncabin during flight, energy requirements for other metabolic activities (such as\nmaintaining resting metabolic rate and responding to stress) may increase, to result in\nan unchanged total energy expenditure.  In  ground-based studies, during bed rest\ntotal energy expenditure was less than before bed rest, but resting energy\nexpenditure did not change (38).  Because total energy expenditure during flight is\neither unchanged (2) from preflight levels  or increased (6), bed rest may not be an\nappropriate model for studies of energy metabolism during flight.  One possible\nexplanation for this difference is the lack of a metabolic response to stress during bed\nrest.  Attempts have been made to improve the utility of these ground studies through\nthe administration of a metabolic stressor (such as triiodothyronine or cortisol) to\nprovide a better ground-based model than bed rest for the metabolic effects of space\nflight on energy and fuel metabolism (39).",
+      "verification_status": "full_text_acquired_support_not_automatically_verified",
+      "reviewed_claims": []
+    },
+    {
+      "id": "metabolic_2019-p1-0-6e330e0f5e",
+      "type": "scientific_source",
+      "title": "Astronaut Mass Balance for Long Duration Missions",
+      "document_id": "metabolic_2019",
+      "chunk_id": "metabolic_2019-p1-0-6e330e0f5e",
+      "rule_id": null,
+      "locator": "PDF physical page 1; original page; printed page not transcribed",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20190027563/downloads/20190027563.pdf",
+      "excerpt": "49th International Conference on Environmental Systems                                                                                          ICES-2019-126\n7-11 July 2019, Boston, Massachusetts\n\n                    Astronaut Mass Balance for Long Duration Missions\n\n                                                                      Michael K. Ewert1\n                                                   NASA Johnson Space Center, Houston, TX, 77058\n\n                                                                               And\n\n                                                                       Chel Stromgren2\n                                                            Binera, Inc., Rockville, MD, 20850\n\n                          Human spaceflight logistics requirements are strongly driven by the daily living needs of\n                     the  astronauts,  including  their  biological  functions.  Oxygen,  water  and  food  are  absolute\n                     requirements  to  sustain  life  and  must  be  supplied  at adequate rates.  However,  these  rates\n                     can vary from day to day and from person to person. Beyond the body’s immediate physical\n                     needs,  water  is  also  required  for  important  health  and  hygiene  functions  within  the\n                     spacecraft.  Undesirable  weight  loss  or gain  aside,            human     waste  product  mass       outputs  will\n                     equal    the  resource     inputs  over     time,  resulting  in  a     mass  balance      that  can  be  used  for\n                     planning  consumable  resources  for  astronauts.  Best                planning     values,  as  well  as  range  of\n                     variability for inputs and outputs are explored at both the individual physiological level and\n                     the spacecraft level. These values are important for design of life support and habitability\n                     systems  as  well  as  for      long  duration      mission  planning.       Current  spacecraft        life  support\n                     systems are not fully closed loop, but the International Space Station does recycle most of its\n                     air  and  water.     The  astronaut  mass  balances  at  the  personal  and  vehicle  level  can  have\n                     different  impacts  at  different  levels  of  system  closure.  Recommendations  are  made  for  a\n                     consistent  set  of  values  representing          a  realistic   astronaut  mass  balance  over  reasonable\n                     durations for exploration missions.\n\n                                                                       Nomenclature\n          BVAD         =    Baseline Values and Assumptions Document\n          ECLSS        =    Environmental Control and Life Support System\n          EVA          =    Extravehicular Activity\n          HIDH         =    Human Integration Design Handbook\n          ISS          =    International Space Station\n          WPA          =    Water Processor Assembly\n\n                                                                     I.  Introduction\n                HE principle of mass conservation can be applied to the crew of a spacecraft in order to determine their life\n          T support and daily living needs. Over time, given steady body mass, each individual’s mass inputs and outputs\n          will balance. Inputs of oxygen, water and food will be greater for larger and more active astronauts, but reasonable\n          ranges, averages, and realistic mission planning values can be determined based on mission and crew characteristics.\n          Similarly, astronaut mass outputs can be estimated, calculated and/or measured, and over a timescale of weeks or\n          months, input will equal output.\n               Metabolic input  and  output       planning  values     for  a  representative  astronaut  will  first  be  explored     in  section  II\n          along with data sources for these values. Design values for life support system hardware will often have to take into\n          account transients, failure scenarios and other worst-case assumptions. These values will be different for open loop\n          and regenerative life support architectures, which are discussed in section III. For long duration mission planning,\n          metabolic    values based  on      conservative    crew  characteristics     should  be  good design  values.  However,          even  with\n          many years of spaceflight experience, uncertainty still exists in these values, and the exact crew complement will not",
+      "verification_status": "full_text_acquired_support_not_automatically_verified",
+      "reviewed_claims": []
+    },
+    {
+      "id": "metabolic_2019-p5-0-fcf4a47845",
+      "type": "scientific_source",
+      "title": "Astronaut Mass Balance for Long Duration Missions",
+      "document_id": "metabolic_2019",
+      "chunk_id": "metabolic_2019-p5-0-fcf4a47845",
+      "rule_id": null,
+      "locator": "PDF physical page 5; original page; printed page not transcribed",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20190027563/downloads/20190027563.pdf",
+      "excerpt": "is  the  selected  means  of  oxygen  provision,  then  water  margin  is  shared  with  oxygen  margin,  which  could  be  an\nadvantage. However, the water electrolyzer then becomes life critical.\n\nB.  Regenerative Life Support\n    The  other  extreme  from        “open  loop”     would  be  a  fully  “closed  loop”  life  support  system.           Spaceship  Earth\noperates this way, with many biological and chemical processes and cycles acting to recycle wastes into resources\nfor another part of the system. Some argue that our ecosystem is out of balance and thus not sustainable for the long\nhaul. Nonetheless, this example has inspired many studies and research efforts into closed ecological life support\nsystems for space travel.5\n    Current  technology,  as  demonstrated  on  the  ISS,  uses  physical/chemical  regenerative  life  support  systems  to\nalmost  completely  close  the  air  and         water  loops.6     Food  production  in  space,  on  the  other  hand,  is  nascent\ntechnology.  But,  efforts  such  as  the  European  Union’s  EDEN  project7                     and  NASA’s  NextStep  Green  Wall\ndevelopment8 seek to change this.           For now, mostly-closed or “regenerative” life support systems can be designed\nusing ISS-like technologies and the astronaut mass balance values from Figure 1. Figure 3 shows an example ISS-\nlike regenerative life support system mass balance, focusing on water. Here the control volume for analysis is drawn\naround the crew’s habitation module rather than the individual crewmember. For easy scaling to various crew sizes,\nvalues are still given as per person per day.\n    In the case in Figure 3, oxygen is supplied to the crew by water electrolysis, and a portion of the carbon dioxide\nexhaled by the astronaut is recycled via the Sabatier process, as described in Eq. (1). The hydrogen required for this\nreaction is supplied from the byproduct of splitting water to produce oxygen, and this becomes the limiting factor.\nExtra CO2     is  vented overboard along  with the methane (CH4) and small amounts of other gases. Thus                             only 0.47\nkg/person/day of water can be recovered by this process, assuming 90% recovery efficiency.\n\n                                                      4 H2 + CO2 → 2 H2O + CH4                                                               (1)\n\n    The value for hygiene water that a crewmember                 uses to clean themselves is a maximum based on the HIDH1.\nSince current habitats do not have hand wash or shower, actual usage has been less. Values for flush water, water to\nsupply oxygen to the water processor assembly (WPA) and water in wet wipes are from the BVAD2.\n    Other  things  that  will  affect  the  closure  of  the  life  support  system,  which  are  neglected  here,  include  other\nrequirements for oxygen and water such as module leakage, science experiments, and extravehicular activity (EVA).\nEVA can be a source of consumables loss in several ways, such as the airlock, cooling systems that vent water, and\nnon-regenerative CO2 removal systems in the space suit. On the other hand, water loop closure is aided in the ISS-\nlike case by the fact that some water is supplied to the habitat in the form of hydrated food and pre-wetted hygiene\nsupplies (most notably wet wipes). The body also produced some water, known as metabolic water, from the food it\nconsumes. Thus, these water sources appear on the input, or supply side, of the balance in Figure 3. Red values in\nFigure 3 represent water flows within the habitat, whereas black values are bound in supplied commodities (input)\nor waste products (output). Future technologies can potentially recover more of this water from waste products.",
+      "verification_status": "full_text_acquired_support_not_automatically_verified",
+      "reviewed_claims": []
+    },
+    {
+      "id": "bvad_2022-p73-0-bfe0e18801",
+      "type": "scientific_source",
+      "title": "Life Support Baseline Values and Assumptions Document, Rev 2",
+      "document_id": "bvad_2022",
+      "chunk_id": "bvad_2022-p73-0-bfe0e18801",
+      "rule_id": null,
+      "locator": "PDF physical page 73; original page; printed page not transcribed",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "excerpt": "Life Support Baseline Values and Assumptions Document , NASA/TP-2015-218570, Rev2                                                                                                                                                                                                                                                                                                                                                                                                                                                                               February 2022\n\n(greater than 30 day) mission. This 82 kg /CM mass represents that of a mean male astronaut in the year 2015\n(Ewert MK 2019a).\n\nRespiratory Quotient: Respira tory quotient is defined as moles of carbon dioxide produced by moles of oxygen\nconsumed. Respiratory quotient values used in the 2019 runs of the 41  -Node Man (Ewert, et al., 2021) simulations\nare: 0.86 for nominal  activity and sleeping, 0.95 for aerobic e xercise, and 0.96 for resistive exercise.\n\nCarbon Dioxide Load: The “sweat test” (Crowell, 2018) correlated MetMan model was used to generate this value.\nThis 1.085 kg/CM-day was also used in the 2019 ICES paper sourced above.\n\nOxygen Consumed: The “sweat test” (Crowell, 2018) correlated MetMan model was used to generate this value.\n77\n\nFood Consumed; Mass (without packaging ): Ewert, et al. (2019) and Table 4-47 give an average food supply\nplanning value of 2.39 kg of food (including packaging) per person per day on the International Space Station.\nFrom this value, 0.43 kg was subtracte d for packaging mass, and 0.20 kg (10%) subtracted to account for food\npackages that are not opened and consumed. An additional 0.2 kg of prepared food (60% hydrated) is wasted due\nto food left behind in packages. A total of 1.56 kg of food at 48.7% hydrat  ion is consumed (not including the 0.5\nkg of water needed for hydration).  All assumptions and calculations were taken from the  Ewert, et al. (2019).\n(2019). The 0.8 kg consumed dry mass o f food is calculated by:\n\n            1.56 kg × (1-0.487) = 0.8 kg /CM-d (dry)\n\nFood Consumed; Energy Content: The metabolic rate used in the 2019 MetMan runs was 12.778 MJ/CM -d (Ewert,\net al., 2021); to maintain constant body mass the food energy consumed was set to the same value.\n\nPotable Water Content: This water mass consists of 0.5 kg used for food preparation, 2.00 kg for drinking water,\nand an additional 0.717 kg added due to increased perspiration as a result of the increased exercise profile  (the\n0.717 kg also acts as the “lever” used to ensure the mass bala nces).   The 2.00 and 0.5 kg were sourced from  NASA\nHIDH (2014).\n\nWater in Food Prior to Rehydration :   This value includes the losses described in the “Food Consumed”   section\nabove. The 0.76 kg of water can be found by:\n\n            1.56kg × (0.487) = 0.76 kg /CM-d of Water\n\nMetabolic Water: Metabolic water is generated as the body metabolizes food. This value is calculated as the\ndifference between the water load sum of fecal water, respiration & perspiration water, and urine water, with the\ntotal water consumed.  This value is “internal” to the overall mass balance  that is presented here as a convenience.",
+      "verification_status": "full_text_acquired_support_not_automatically_verified",
+      "reviewed_claims": [
+        "BVAD potable water includes 0.5 kg for food preparation, 2.00 kg drinking water and 0.717 kg associated with the increased exercise profile and mass balance.",
+        "BVAD separately describes water already in food before rehydration; potable water is not a measure of all vehicle hygiene water."
+      ]
+    }
+  ],
+  "retrieval": {
+    "requested_mode": "dense",
+    "actual_mode": "bm25",
+    "fallback_reason": "mock_offline_bm25",
+    "model": null,
+    "dimensions": null,
+    "ranking_method": "bm25"
+  },
+  "corpus_version": "corpus-4c40231326d1bc2b",
+  "index_version": "index-26765ae220846386",
+  "research_status": "partial",
+  "assumptions": [
+    "No-refill horizons are individual consumption references, not whole-world survival predictions.",
+    "Plans refer to the next unsettled tick even when paused. No real state is changed.",
+    "Personal horizons assume a living crew; aggregate reference rates assume four living crew. Unknown alive is never a verified survival assessment."
+  ],
+  "warnings": [],
+  "missing_fields": [],
+  "integration_gaps": [
+    "Core/world production DTO mapping and fatal-phase micro-order require team alignment.",
+    "LAN connectivity has not been established by this calculation."
+  ],
+  "diagnostics": {
+    "llm_calls": 0,
+    "embedding_calls": 0,
+    "cache_hits": 0,
+    "elapsed_ms": 1.48,
+    "tool_calls": 1
+  },
+  "tool_trace": [
+    {
+      "tool": "retrieve_evidence",
+      "input": {
+        "query": "Astronaut water intake energy requirements physical activity nominal metabolic oxygen consumption",
+        "top_k": 5
+      },
+      "summary": {
+        "result_count": 5,
+        "audit_result_id": null
+      },
+      "elapsed_ms": 0.74
+    }
+  ]
+}

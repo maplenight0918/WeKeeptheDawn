@@ -1,0 +1,605 @@
+{
+  "$defs": {
+    "Allocation": {
+      "additionalProperties": false,
+      "properties": {
+        "plot_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Plot Id",
+          "type": "string"
+        },
+        "water_quota_liters": {
+          "minimum": 0,
+          "title": "Water Quota Liters",
+          "type": "number"
+        },
+        "power_quota_eu": {
+          "minimum": 0,
+          "title": "Power Quota Eu",
+          "type": "number"
+        }
+      },
+      "required": [
+        "plot_id",
+        "water_quota_liters",
+        "power_quota_eu"
+      ],
+      "title": "Allocation",
+      "type": "object"
+    },
+    "AnalysisOptions": {
+      "additionalProperties": false,
+      "properties": {
+        "include_recommendations": {
+          "default": true,
+          "title": "Include Recommendations",
+          "type": "boolean"
+        }
+      },
+      "title": "AnalysisOptions",
+      "type": "object"
+    },
+    "Crew": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "alive": {
+          "title": "Alive",
+          "type": "boolean"
+        },
+        "food_energy": {
+          "anyOf": [
+            {
+              "maximum": 3000,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Food Energy"
+        },
+        "water": {
+          "anyOf": [
+            {
+              "maximum": 2,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Water"
+        }
+      },
+      "required": [
+        "id",
+        "alive",
+        "food_energy",
+        "water"
+      ],
+      "title": "Crew",
+      "type": "object"
+    },
+    "CropTask": {
+      "additionalProperties": false,
+      "properties": {
+        "crew_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Crew Id",
+          "type": "string"
+        },
+        "task": {
+          "enum": [
+            "harvest",
+            "clear"
+          ],
+          "title": "Task",
+          "type": "string"
+        },
+        "plot_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Plot Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "crew_id",
+        "task",
+        "plot_id"
+      ],
+      "title": "CropTask",
+      "type": "object"
+    },
+    "Drink": {
+      "additionalProperties": false,
+      "properties": {
+        "crew_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Crew Id",
+          "type": "string"
+        },
+        "task": {
+          "const": "drink",
+          "title": "Task",
+          "type": "string"
+        },
+        "amount": {
+          "exclusiveMinimum": 0,
+          "maximum": 0.5,
+          "minimum": 0,
+          "title": "Amount",
+          "type": "number"
+        }
+      },
+      "required": [
+        "crew_id",
+        "task",
+        "amount"
+      ],
+      "title": "Drink",
+      "type": "object"
+    },
+    "Eat": {
+      "additionalProperties": false,
+      "properties": {
+        "crew_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Crew Id",
+          "type": "string"
+        },
+        "task": {
+          "const": "eat",
+          "title": "Task",
+          "type": "string"
+        },
+        "amount": {
+          "exclusiveMinimum": 0,
+          "maximum": 1000,
+          "minimum": 0,
+          "title": "Amount",
+          "type": "number"
+        }
+      },
+      "required": [
+        "crew_id",
+        "task",
+        "amount"
+      ],
+      "title": "Eat",
+      "type": "object"
+    },
+    "Generate": {
+      "additionalProperties": false,
+      "properties": {
+        "crew_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Crew Id",
+          "type": "string"
+        },
+        "task": {
+          "const": "generate",
+          "title": "Task",
+          "type": "string"
+        },
+        "work_fraction": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Work Fraction",
+          "type": "number"
+        }
+      },
+      "required": [
+        "crew_id",
+        "task",
+        "work_fraction"
+      ],
+      "title": "Generate",
+      "type": "object"
+    },
+    "Idle": {
+      "additionalProperties": false,
+      "properties": {
+        "crew_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Crew Id",
+          "type": "string"
+        },
+        "task": {
+          "const": "idle",
+          "title": "Task",
+          "type": "string"
+        }
+      },
+      "required": [
+        "crew_id",
+        "task"
+      ],
+      "title": "Idle",
+      "type": "object"
+    },
+    "Plan": {
+      "additionalProperties": false,
+      "properties": {
+        "for_tick": {
+          "minimum": 1,
+          "title": "For Tick",
+          "type": "integer"
+        },
+        "crew_tasks": {
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "clear": "#/$defs/CropTask",
+                "drink": "#/$defs/Drink",
+                "eat": "#/$defs/Eat",
+                "generate": "#/$defs/Generate",
+                "harvest": "#/$defs/CropTask",
+                "idle": "#/$defs/Idle",
+                "plant": "#/$defs/Plant"
+              },
+              "propertyName": "task"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/Idle"
+              },
+              {
+                "$ref": "#/$defs/Eat"
+              },
+              {
+                "$ref": "#/$defs/Drink"
+              },
+              {
+                "$ref": "#/$defs/Generate"
+              },
+              {
+                "$ref": "#/$defs/CropTask"
+              },
+              {
+                "$ref": "#/$defs/Plant"
+              }
+            ]
+          },
+          "maxItems": 4,
+          "minItems": 4,
+          "title": "Crew Tasks",
+          "type": "array"
+        },
+        "refill_order": {
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Refill Order",
+          "type": "array"
+        },
+        "water_production_request_liters": {
+          "minimum": 0,
+          "title": "Water Production Request Liters",
+          "type": "number"
+        },
+        "irrigation_allocations": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Allocation"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Irrigation Allocations"
+        },
+        "crop_operation_order": {
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Crop Operation Order",
+          "type": "array"
+        }
+      },
+      "required": [
+        "for_tick",
+        "crew_tasks",
+        "refill_order",
+        "water_production_request_liters",
+        "irrigation_allocations",
+        "crop_operation_order"
+      ],
+      "title": "Plan",
+      "type": "object"
+    },
+    "Plant": {
+      "additionalProperties": false,
+      "properties": {
+        "crew_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Crew Id",
+          "type": "string"
+        },
+        "task": {
+          "const": "plant",
+          "title": "Task",
+          "type": "string"
+        },
+        "plot_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Plot Id",
+          "type": "string"
+        },
+        "crop_type": {
+          "enum": [
+            "lettuce",
+            "potato",
+            "tomato",
+            "wheat",
+            "soybean"
+          ],
+          "title": "Crop Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "crew_id",
+        "task",
+        "plot_id",
+        "crop_type"
+      ],
+      "title": "Plant",
+      "type": "object"
+    },
+    "Plot": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "empty",
+            "growing",
+            "mature",
+            "dead"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "crop_type": {
+          "anyOf": [
+            {
+              "enum": [
+                "lettuce",
+                "potato",
+                "tomato",
+                "wheat",
+                "soybean"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Crop Type"
+        },
+        "growth_ticks": {
+          "minimum": 0,
+          "title": "Growth Ticks",
+          "type": "integer"
+        },
+        "consecutive_unirrigated_ticks": {
+          "minimum": 0,
+          "title": "Consecutive Unirrigated Ticks",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "status",
+        "crop_type",
+        "growth_ticks",
+        "consecutive_unirrigated_ticks"
+      ],
+      "title": "Plot",
+      "type": "object"
+    },
+    "Resources": {
+      "additionalProperties": false,
+      "properties": {
+        "water": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Water"
+        },
+        "oxygen": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Oxygen"
+        },
+        "food": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Food"
+        },
+        "power": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Power"
+        }
+      },
+      "required": [
+        "water",
+        "oxygen",
+        "food",
+        "power"
+      ],
+      "title": "Resources",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "2.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "request_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "title": "Request Id",
+      "type": "string"
+    },
+    "state_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "title": "State Id",
+      "type": "string"
+    },
+    "world_rules_version": {
+      "const": "0.12",
+      "title": "World Rules Version",
+      "type": "string"
+    },
+    "tick": {
+      "minimum": 0,
+      "title": "Tick",
+      "type": "integer"
+    },
+    "snapshot_phase": {
+      "const": "between_ticks",
+      "title": "Snapshot Phase",
+      "type": "string"
+    },
+    "world_status": {
+      "enum": [
+        "running",
+        "paused",
+        "planning",
+        "error_paused",
+        "failed"
+      ],
+      "title": "World Status",
+      "type": "string"
+    },
+    "resources": {
+      "$ref": "#/$defs/Resources"
+    },
+    "crew": {
+      "items": {
+        "$ref": "#/$defs/Crew"
+      },
+      "maxItems": 4,
+      "minItems": 4,
+      "title": "Crew",
+      "type": "array"
+    },
+    "plots": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/Plot"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Plots"
+    },
+    "water_production_available": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Water Production Available"
+    },
+    "next_tick_plan": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Plan"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "analysis": {
+      "$ref": "#/$defs/AnalysisOptions"
+    }
+  },
+  "required": [
+    "schema_version",
+    "request_id",
+    "state_id",
+    "world_rules_version",
+    "tick",
+    "snapshot_phase",
+    "world_status",
+    "resources",
+    "crew"
+  ],
+  "title": "AnalyzeRequest",
+  "type": "object"
+}

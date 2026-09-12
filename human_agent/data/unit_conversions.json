@@ -1,0 +1,6 @@
+{
+  "version": "user-confirmed-2026-09-12",
+  "eu_to_kwh": "3.9745",
+  "source": "User confirmed 1 EU equals 3.9745 kWh; not a scientific-source claim.",
+  "scope": "Unit conversion only; does not rebalance world v0.12 generation or water production."
+}

@@ -1,0 +1,14 @@
+{
+  "data/index/ids.json": {
+    "bytes": 1477328,
+    "sha256": "98797ca3ce809122c4e91d10b29b7d89869e69115b7516f0a918c6437dc84101"
+  },
+  "data/index/chunks.jsonl": {
+    "bytes": 106449736,
+    "sha256": "949a3b1230593f46bd77b3040c3adf5b7656eda897e274a4bd6550a050803b5b"
+  },
+  "data/index/embeddings.npy": {
+    "bytes": 262799488,
+    "sha256": "63ac96db66314f0e9feac58845c5cb1ec800aeb53f5e5c5636bb4069714e2425"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "lettuce": {
+    "name": "萵苣",
+    "maturity_ticks": {"value": 30, "unit": "growth_tick", "source": "guide §2.1"},
+    "oxygen_per_tick": {"value": 16, "unit": "OU/plot/tick", "source": "guide §2.1"},
+    "yield_g_m2_day": {"value": 19.5, "unit": "g/m²/literature_day", "source": "guide §2.2"},
+    "kcal_per_g": {"value": 0.2, "unit": "game_kcal/g", "source": "guide §2.2"}
+  },
+  "potato": {
+    "name": "馬鈴薯",
+    "maturity_ticks": {"value": 90, "unit": "growth_tick", "source": "guide §2.1"},
+    "oxygen_per_tick": {"value": 16, "unit": "OU/plot/tick", "source": "guide §2.1"},
+    "yield_g_m2_day": {"value": 16.25, "unit": "g/m²/literature_day", "source": "guide §2.2"},
+    "kcal_per_g": {"value": 1.2, "unit": "game_kcal/g", "source": "guide §2.2"}
+  },
+  "tomato": {
+    "name": "番茄",
+    "maturity_ticks": {"value": 90, "unit": "growth_tick", "source": "guide §2.1"},
+    "oxygen_per_tick": {"value": 22, "unit": "OU/plot/tick", "source": "guide §2.1"},
+    "yield_g_m2_day": {"value": 13, "unit": "g/m²/literature_day", "source": "guide §2.2"},
+    "kcal_per_g": {"value": 0.3, "unit": "game_kcal/g", "source": "guide §2.2"}
+  },
+  "wheat": {
+    "name": "小麥",
+    "maturity_ticks": {"value": 90, "unit": "growth_tick", "source": "guide §2.1"},
+    "oxygen_per_tick": {"value": 10, "unit": "OU/plot/tick", "source": "guide §2.1"},
+    "yield_g_m2_day": {"value": 9.75, "unit": "g/m²/literature_day", "source": "guide §2.2"},
+    "kcal_per_g": {"value": 3.0, "unit": "game_kcal/g", "source": "guide §2.2"}
+  },
+  "soybean": {
+    "name": "黃豆",
+    "maturity_ticks": {"value": 90, "unit": "growth_tick", "source": "guide §2.1"},
+    "oxygen_per_tick": {"value": 12, "unit": "OU/plot/tick", "source": "guide §2.1"},
+    "yield_g_m2_day": {"value": 6.93, "unit": "g/m²/literature_day", "source": "guide §2.2"},
+    "kcal_per_g": {"value": 3.9, "unit": "game_kcal/g", "source": "guide §2.2"}
+  }
+}

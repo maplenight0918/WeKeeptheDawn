@@ -1,0 +1,113 @@
+{
+  "type": "object",
+  "properties": {
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "proposals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "proposal_id": {
+            "type": "string"
+          },
+          "strategy": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "expected_effect": {
+            "type": "string"
+          },
+          "tradeoffs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "proposal_id",
+          "strategy",
+          "reason",
+          "expected_effect",
+          "tradeoffs",
+          "evidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "reviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "message_id": {
+            "type": "string"
+          },
+          "proposal_id": {
+            "type": "string"
+          },
+          "disposition": {
+            "type": "string",
+            "enum": [
+              "accept",
+              "modify",
+              "reject",
+              "needs_clarification"
+            ]
+          },
+          "assessment": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "message_id",
+          "proposal_id",
+          "disposition",
+          "assessment"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "follow_up_reason": {
+      "type": "string"
+    },
+    "decision_reason": {
+      "type": "string"
+    },
+    "uncertainties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "observations",
+    "proposals",
+    "reviews",
+    "conflicts",
+    "follow_up_reason",
+    "decision_reason",
+    "uncertainties"
+  ],
+  "additionalProperties": false
+}

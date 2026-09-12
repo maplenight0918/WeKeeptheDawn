@@ -1,0 +1,36 @@
+[
+  {
+    "case": "original_core_request",
+    "http_status": 200,
+    "mode": "live",
+    "client_elapsed_ms": 22689.34,
+    "passed": true
+  },
+  {
+    "round": 1,
+    "http_status": 200,
+    "mode": "live",
+    "client_elapsed_ms": 28532.88,
+    "proposals": 1,
+    "reviews": 0,
+    "passed": true
+  },
+  {
+    "round": 2,
+    "http_status": 200,
+    "mode": "live",
+    "client_elapsed_ms": 31750.36,
+    "proposals": 1,
+    "reviews": 2,
+    "passed": true
+  },
+  {
+    "round": 3,
+    "http_status": 200,
+    "mode": "live",
+    "client_elapsed_ms": 34134.57,
+    "proposals": 1,
+    "reviews": 3,
+    "passed": true
+  }
+]

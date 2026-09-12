@@ -1,0 +1,1095 @@
+{
+  "$defs": {
+    "Audit": {
+      "additionalProperties": false,
+      "properties": {
+        "result_id": {
+          "title": "Result Id",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "feasible_in_scope",
+            "fatal_in_scope",
+            "unsafe_in_scope",
+            "incomplete",
+            "not_applicable"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "scope": {
+          "title": "Scope",
+          "type": "string"
+        },
+        "for_tick": {
+          "title": "For Tick",
+          "type": "integer"
+        },
+        "coverage_end": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Coverage End"
+        },
+        "fatal_stage": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Fatal Stage"
+        },
+        "stage_results": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Stage"
+          },
+          "title": "Stage Results",
+          "type": "object"
+        },
+        "ledger": {
+          "items": {
+            "$ref": "#/$defs/LedgerEntry"
+          },
+          "title": "Ledger",
+          "type": "array"
+        },
+        "known_after_values": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Known After Values"
+        },
+        "fatal_conditions": {
+          "items": {
+            "$ref": "#/$defs/FatalCondition"
+          },
+          "title": "Fatal Conditions",
+          "type": "array"
+        },
+        "unknown_dependencies": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Unknown Dependencies",
+          "type": "array"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "result_id",
+        "status",
+        "scope",
+        "for_tick",
+        "coverage_end",
+        "fatal_stage",
+        "stage_results",
+        "ledger",
+        "known_after_values",
+        "fatal_conditions",
+        "unknown_dependencies",
+        "limitations"
+      ],
+      "title": "Audit",
+      "type": "object"
+    },
+    "CrewAssessment": {
+      "additionalProperties": false,
+      "properties": {
+        "crew_id": {
+          "title": "Crew Id",
+          "type": "string"
+        },
+        "alive": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Alive"
+        },
+        "food_energy": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Food Energy"
+        },
+        "water": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Water"
+        },
+        "energy_ratio": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Energy Ratio"
+        },
+        "water_ratio": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Water Ratio"
+        },
+        "low_flags": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Low Flags",
+          "type": "object"
+        },
+        "idle_no_refill": {
+          "$ref": "#/$defs/Margins"
+        },
+        "requested_work_no_refill": {
+          "$ref": "#/$defs/Margins"
+        },
+        "after_refill": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "minimum": 0,
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "After Refill"
+        },
+        "after_base": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "minimum": 0,
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "After Base"
+        },
+        "actual_work": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Actual Work"
+        },
+        "fatal_conditions": {
+          "items": {
+            "$ref": "#/$defs/FatalCondition"
+          },
+          "title": "Fatal Conditions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "crew_id",
+        "alive",
+        "food_energy",
+        "water",
+        "energy_ratio",
+        "water_ratio",
+        "low_flags",
+        "idle_no_refill",
+        "requested_work_no_refill",
+        "after_refill",
+        "after_base",
+        "actual_work",
+        "fatal_conditions"
+      ],
+      "title": "CrewAssessment",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "world_rule",
+            "scientific_source",
+            "implementation_assumption"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "document_id": {
+          "title": "Document Id",
+          "type": "string"
+        },
+        "chunk_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Chunk Id"
+        },
+        "rule_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Rule Id"
+        },
+        "locator": {
+          "title": "Locator",
+          "type": "string"
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Source Url"
+        },
+        "excerpt": {
+          "title": "Excerpt",
+          "type": "string"
+        },
+        "verification_status": {
+          "title": "Verification Status",
+          "type": "string"
+        },
+        "reviewed_claims": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reviewed Claims",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "title",
+        "document_id",
+        "chunk_id",
+        "rule_id",
+        "locator",
+        "source_url",
+        "excerpt",
+        "verification_status"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "FatalCondition": {
+      "additionalProperties": false,
+      "properties": {
+        "entity_id": {
+          "title": "Entity Id",
+          "type": "string"
+        },
+        "resource": {
+          "title": "Resource",
+          "type": "string"
+        },
+        "phase": {
+          "title": "Phase",
+          "type": "string"
+        },
+        "trigger_values": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Trigger Values",
+          "type": "object"
+        },
+        "rule_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Rule Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "entity_id",
+        "resource",
+        "phase",
+        "trigger_values",
+        "rule_ids"
+      ],
+      "title": "FatalCondition",
+      "type": "object"
+    },
+    "Horizon": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "known",
+            "unknown",
+            "already_failed"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "continuous_margin_ticks": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Continuous Margin Ticks"
+        },
+        "first_fatal_tick_offset": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "First Fatal Tick Offset"
+        },
+        "safe_complete_ticks": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Safe Complete Ticks"
+        },
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumptions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "status",
+        "continuous_margin_ticks",
+        "first_fatal_tick_offset",
+        "safe_complete_ticks",
+        "assumptions"
+      ],
+      "title": "Horizon",
+      "type": "object"
+    },
+    "LedgerEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "phase": {
+          "title": "Phase",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "transfer",
+            "consumption",
+            "production",
+            "overflow"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "resource": {
+          "title": "Resource",
+          "type": "string"
+        },
+        "entity_id": {
+          "title": "Entity Id",
+          "type": "string"
+        },
+        "amount": {
+          "minimum": 0,
+          "title": "Amount",
+          "type": "number"
+        }
+      },
+      "required": [
+        "phase",
+        "kind",
+        "resource",
+        "entity_id",
+        "amount"
+      ],
+      "title": "LedgerEntry",
+      "type": "object"
+    },
+    "Margins": {
+      "additionalProperties": false,
+      "properties": {
+        "energy": {
+          "$ref": "#/$defs/Horizon"
+        },
+        "water": {
+          "$ref": "#/$defs/Horizon"
+        },
+        "energy_rate": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Energy Rate"
+        },
+        "water_rate": {
+          "minimum": 0,
+          "title": "Water Rate",
+          "type": "number"
+        }
+      },
+      "required": [
+        "energy",
+        "water",
+        "energy_rate",
+        "water_rate"
+      ],
+      "title": "Margins",
+      "type": "object"
+    },
+    "Recommendation": {
+      "additionalProperties": false,
+      "properties": {
+        "proposal_id": {
+          "title": "Proposal Id",
+          "type": "string"
+        },
+        "proposal_kind": {
+          "enum": [
+            "eat",
+            "drink",
+            "adjust_generation",
+            "adjust_water_production",
+            "reserve_crew_for_refill",
+            "request_plant_review"
+          ],
+          "title": "Proposal Kind",
+          "type": "string"
+        },
+        "target_crew_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Target Crew Ids",
+          "type": "array"
+        },
+        "proposed_changes": {
+          "additionalProperties": true,
+          "title": "Proposed Changes",
+          "type": "object"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        },
+        "constraints": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Constraints",
+          "type": "array"
+        },
+        "coordination_needed": {
+          "title": "Coordination Needed",
+          "type": "boolean"
+        },
+        "feasibility": {
+          "enum": [
+            "verified_for_audited_scope",
+            "requires_core_coordination",
+            "unverified",
+            "infeasible"
+          ],
+          "title": "Feasibility",
+          "type": "string"
+        },
+        "rule_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Rule Ids",
+          "type": "array"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "audit_result_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Audit Result Id"
+        },
+        "expected_effect": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Expected Effect"
+        }
+      },
+      "required": [
+        "proposal_id",
+        "proposal_kind",
+        "target_crew_ids",
+        "proposed_changes",
+        "reason",
+        "constraints",
+        "coordination_needed",
+        "feasibility",
+        "rule_ids",
+        "evidence_ids",
+        "audit_result_id",
+        "expected_effect"
+      ],
+      "title": "Recommendation",
+      "type": "object"
+    },
+    "RetrievalInfo": {
+      "additionalProperties": false,
+      "properties": {
+        "requested_mode": {
+          "title": "Requested Mode",
+          "type": "string"
+        },
+        "actual_mode": {
+          "enum": [
+            "dense",
+            "bm25",
+            "mixed",
+            "none",
+            "not_used"
+          ],
+          "title": "Actual Mode",
+          "type": "string"
+        },
+        "fallback_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Fallback Reason"
+        },
+        "model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Model"
+        },
+        "dimensions": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Dimensions"
+        },
+        "ranking_method": {
+          "default": "none",
+          "title": "Ranking Method",
+          "type": "string"
+        }
+      },
+      "required": [
+        "requested_mode",
+        "actual_mode",
+        "fallback_reason",
+        "model",
+        "dimensions"
+      ],
+      "title": "RetrievalInfo",
+      "type": "object"
+    },
+    "Risk": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "severity": {
+          "enum": [
+            "critical",
+            "warning",
+            "unknown",
+            "info"
+          ],
+          "title": "Severity",
+          "type": "string"
+        },
+        "impact_domain": {
+          "enum": [
+            "human",
+            "public",
+            "plant_dependency",
+            "integration"
+          ],
+          "title": "Impact Domain",
+          "type": "string"
+        },
+        "entity_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Entity Id"
+        },
+        "resource": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Resource"
+        },
+        "phase": {
+          "title": "Phase",
+          "type": "string"
+        },
+        "tick_offset": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Tick Offset"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "trigger_values": {
+          "additionalProperties": true,
+          "title": "Trigger Values",
+          "type": "object"
+        },
+        "rule_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Rule Ids",
+          "type": "array"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "severity",
+        "impact_domain",
+        "entity_id",
+        "resource",
+        "phase",
+        "tick_offset",
+        "description",
+        "rule_ids",
+        "evidence_ids"
+      ],
+      "title": "Risk",
+      "type": "object"
+    },
+    "Stage": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "evaluated",
+            "not_reached",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "details": {
+          "additionalProperties": true,
+          "title": "Details",
+          "type": "object"
+        }
+      },
+      "required": [
+        "status",
+        "details"
+      ],
+      "title": "Stage",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "2.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "request_id": {
+      "title": "Request Id",
+      "type": "string"
+    },
+    "state_id": {
+      "title": "State Id",
+      "type": "string"
+    },
+    "tick": {
+      "title": "Tick",
+      "type": "integer"
+    },
+    "for_tick": {
+      "title": "For Tick",
+      "type": "integer"
+    },
+    "world_rules_version": {
+      "const": "0.12",
+      "title": "World Rules Version",
+      "type": "string"
+    },
+    "rules_hash": {
+      "title": "Rules Hash",
+      "type": "string"
+    },
+    "analysis_status": {
+      "enum": [
+        "complete",
+        "partial"
+      ],
+      "title": "Analysis Status",
+      "type": "string"
+    },
+    "execution_mode": {
+      "enum": [
+        "live",
+        "mock",
+        "degraded",
+        "deterministic"
+      ],
+      "title": "Execution Mode",
+      "type": "string"
+    },
+    "current_world_condition": {
+      "enum": [
+        "active",
+        "already_failed",
+        "inconsistent",
+        "unknown"
+      ],
+      "title": "Current World Condition",
+      "type": "string"
+    },
+    "crew_assessments": {
+      "items": {
+        "$ref": "#/$defs/CrewAssessment"
+      },
+      "title": "Crew Assessments",
+      "type": "array"
+    },
+    "public_resource_assessment": {
+      "additionalProperties": true,
+      "title": "Public Resource Assessment",
+      "type": "object"
+    },
+    "workforce_summary": {
+      "additionalProperties": true,
+      "title": "Workforce Summary",
+      "type": "object"
+    },
+    "next_tick_audit": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Audit"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "risks": {
+      "items": {
+        "$ref": "#/$defs/Risk"
+      },
+      "title": "Risks",
+      "type": "array"
+    },
+    "recommendations": {
+      "items": {
+        "$ref": "#/$defs/Recommendation"
+      },
+      "title": "Recommendations",
+      "type": "array"
+    },
+    "human_requests_to_core": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Human Requests To Core",
+      "type": "array"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/Evidence"
+      },
+      "title": "Evidence",
+      "type": "array"
+    },
+    "retrieval": {
+      "$ref": "#/$defs/RetrievalInfo"
+    },
+    "corpus_version": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Corpus Version"
+    },
+    "index_version": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Index Version"
+    },
+    "research_status": {
+      "enum": [
+        "complete",
+        "partial"
+      ],
+      "title": "Research Status",
+      "type": "string"
+    },
+    "assumptions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Assumptions",
+      "type": "array"
+    },
+    "warnings": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Warnings",
+      "type": "array"
+    },
+    "missing_fields": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Missing Fields",
+      "type": "array"
+    },
+    "integration_gaps": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Integration Gaps",
+      "type": "array"
+    },
+    "diagnostics": {
+      "additionalProperties": true,
+      "title": "Diagnostics",
+      "type": "object"
+    },
+    "tool_trace": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Tool Trace",
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "request_id",
+    "state_id",
+    "tick",
+    "for_tick",
+    "world_rules_version",
+    "rules_hash",
+    "analysis_status",
+    "execution_mode",
+    "current_world_condition",
+    "crew_assessments",
+    "public_resource_assessment",
+    "workforce_summary",
+    "next_tick_audit",
+    "risks",
+    "recommendations",
+    "human_requests_to_core",
+    "evidence",
+    "retrieval",
+    "corpus_version",
+    "index_version",
+    "research_status",
+    "assumptions",
+    "warnings",
+    "missing_fields",
+    "integration_gaps",
+    "diagnostics",
+    "tool_trace"
+  ],
+  "title": "AnalyzeResponse",
+  "type": "object"
+}

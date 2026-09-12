@@ -1,0 +1,585 @@
+{
+  "discussion_id": "discussion-test-refill_competition",
+  "round": 1,
+  "sender": "core",
+  "recipient": "human",
+  "world_version": 0,
+  "content": {
+    "question": "請分析此情境的人員與公共資源風險、原計畫可行性，以及需要 Core 協調的事項。",
+    "world": {
+      "world_version": 0,
+      "rules_version": "greenhouse-2026-09-12-v1",
+      "tick": 0,
+      "resources": {
+        "water": 3000,
+        "oxygen": 8000,
+        "food": 1000,
+        "power": 6000
+      },
+      "crew": [
+        {
+          "id": "crew-1",
+          "alive": true,
+          "food_energy": 500,
+          "water": 1.5
+        },
+        {
+          "id": "crew-2",
+          "alive": true,
+          "food_energy": 500,
+          "water": 1.5
+        },
+        {
+          "id": "crew-3",
+          "alive": true,
+          "food_energy": 2400,
+          "water": 1.5
+        },
+        {
+          "id": "crew-4",
+          "alive": true,
+          "food_energy": 2400,
+          "water": 1.5
+        }
+      ],
+      "plots": [
+        {
+          "id": "plot-1",
+          "status": "growing",
+          "crop_type": "lettuce",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-2",
+          "status": "growing",
+          "crop_type": "lettuce",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-3",
+          "status": "growing",
+          "crop_type": "lettuce",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-4",
+          "status": "growing",
+          "crop_type": "lettuce",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-5",
+          "status": "growing",
+          "crop_type": "potato",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-6",
+          "status": "growing",
+          "crop_type": "potato",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-7",
+          "status": "growing",
+          "crop_type": "potato",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-8",
+          "status": "growing",
+          "crop_type": "potato",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-9",
+          "status": "growing",
+          "crop_type": "tomato",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-10",
+          "status": "growing",
+          "crop_type": "tomato",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-11",
+          "status": "growing",
+          "crop_type": "tomato",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-12",
+          "status": "growing",
+          "crop_type": "tomato",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-13",
+          "status": "growing",
+          "crop_type": "wheat",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-14",
+          "status": "growing",
+          "crop_type": "wheat",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-15",
+          "status": "growing",
+          "crop_type": "wheat",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-16",
+          "status": "growing",
+          "crop_type": "wheat",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-17",
+          "status": "growing",
+          "crop_type": "soybean",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-18",
+          "status": "growing",
+          "crop_type": "soybean",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-19",
+          "status": "growing",
+          "crop_type": "soybean",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        },
+        {
+          "id": "plot-20",
+          "status": "growing",
+          "crop_type": "soybean",
+          "growth_ticks": 0,
+          "consecutive_unirrigated_ticks": 0
+        }
+      ],
+      "world_status": "planning",
+      "snapshot_phase": "between_ticks",
+      "next_tick_plan": {
+        "for_tick": 1,
+        "crew_tasks": [
+          {
+            "crew_id": "crew-1",
+            "task": "eat",
+            "amount": 1000
+          },
+          {
+            "crew_id": "crew-2",
+            "task": "eat",
+            "amount": 1000
+          },
+          {
+            "crew_id": "crew-3",
+            "task": "generate",
+            "work_fraction": 1
+          },
+          {
+            "crew_id": "crew-4",
+            "task": "generate",
+            "work_fraction": 1
+          }
+        ],
+        "refill_order": [
+          "crew-2",
+          "crew-1"
+        ],
+        "water_production_request_liters": 174,
+        "irrigation_allocations": [
+          {
+            "plot_id": "plot-1",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-2",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-3",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-4",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-5",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-6",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-7",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-8",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-9",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-10",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-11",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-12",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-13",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-14",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-15",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-16",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-17",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-18",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-19",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          },
+          {
+            "plot_id": "plot-20",
+            "water_quota_liters": 8.7,
+            "power_quota_eu": 5
+          }
+        ],
+        "crop_operation_order": []
+      },
+      "water_production_available": true
+    },
+    "rules": {
+      "rules_version": "greenhouse-2026-09-12-v1",
+      "tick_hours": 1,
+      "environment": {
+        "carbon_dioxide": {
+          "value": 500,
+          "unit": "ppm",
+          "adjustable": false
+        }
+      },
+      "resources": {
+        "food": {
+          "unit": "game_kcal",
+          "capacity": 200000,
+          "warning": 12000
+        },
+        "water": {
+          "unit": "L",
+          "capacity": 4000,
+          "warning": 400
+        },
+        "oxygen": {
+          "unit": "OU",
+          "capacity": 15000,
+          "warning": 600
+        },
+        "power": {
+          "unit": "EU",
+          "capacity": 10000,
+          "warning": 1000
+        }
+      },
+      "crew": {
+        "daily_reference": {
+          "kcal": 3054,
+          "oxygen_kg": 0.895,
+          "water_L": 3.217
+        },
+        "per_tick": {
+          "food_energy": 127.25,
+          "oxygen": 37.291666666666664,
+          "water": 0.13404166666666667
+        },
+        "capacity": {
+          "food_energy": 3000,
+          "water": 2
+        },
+        "warning": {
+          "food_energy": 700,
+          "water": 0.4
+        },
+        "refill_limit": {
+          "eat": 1000,
+          "drink": 0.5
+        },
+        "refill_ratio": 1,
+        "death": "personal energy or water <= 0; any crew death ends mission"
+      },
+      "generation": {
+        "food_energy": 100,
+        "oxygen": 25,
+        "power": 250,
+        "max_units_per_crew_tick": 1,
+        "stations": 4
+      },
+      "water_production": {
+        "power_per_L": 2,
+        "oxygen_per_L": 0.2,
+        "max_L_per_tick": 250
+      },
+      "irrigation": {
+        "water_per_plot": 8.7,
+        "power_per_plot": 5,
+        "atomic_inputs": true,
+        "misses_until_death": 3,
+        "priority": "Core supplied order; omitted living plots receive nothing",
+        "failure": "no input deducted, no growth or oxygen; success resets misses",
+        "dead": "no consumption or yield; clear before planting"
+      },
+      "crops": {
+        "lettuce": {
+          "maturity_ticks": 30,
+          "harvest_game_kcal": 585,
+          "oxygen_per_tick": 16
+        },
+        "potato": {
+          "maturity_ticks": 90,
+          "harvest_game_kcal": 8775,
+          "oxygen_per_tick": 16
+        },
+        "tomato": {
+          "maturity_ticks": 90,
+          "harvest_game_kcal": 1755,
+          "oxygen_per_tick": 22
+        },
+        "wheat": {
+          "maturity_ticks": 90,
+          "harvest_game_kcal": 13162.5,
+          "oxygen_per_tick": 10
+        },
+        "soybean": {
+          "maturity_ticks": 90,
+          "harvest_game_kcal": 12162.15,
+          "oxygen_per_tick": 12
+        }
+      },
+      "tasks": {
+        "occupancy": "eat, drink, generate, plant, harvest, clear: one crew per tick",
+        "controls_and_movement": "visual only, no occupancy",
+        "crop_actions": "at tick end, ordered; no premature harvest; full storage blocks harvest",
+        "plant": "empty plot only; no seed cost; starts growing next tick"
+      },
+      "oxygen_death": "public oxygen <= 0 immediately kills all crew, even before plants produce oxygen",
+      "tick_order": [
+        "ordered refill",
+        "personal metabolism",
+        "public breathing",
+        "generation",
+        "water production",
+        "ordered irrigation",
+        "ordered crop actions"
+      ],
+      "planning": "world paused while planning; validate state version before apply; no simulator",
+      "completion": "no stable/success threshold; continue until death"
+    },
+    "analysis_scope": [
+      "water",
+      "oxygen",
+      "power",
+      "food"
+    ],
+    "unit_conversion_policy": "Core傳送世界原始數值與單位，不轉換文獻單位。專家自行完成文獻與世界單位、時間基準的換算；回覆可執行建議須使用世界單位，並在evidence_and_unknowns說明換算依據或缺少的映射。不得自行假設EU對Wh的比例。電力及跨角色資源分配由Core決定。",
+    "previous_messages": [],
+    "reason": "initial",
+    "response_guidance": "請在外層 display_text 提供2至4句繁體中文對話：觀察、建議、取捨或不確定性。這是公開理由摘要，不是內部思考鏈；不得聲稱操作已執行。另須提供explanation結構：觀察、各項建議策略／理由／效果／代價／依據、回覆其他建議的評估與不確定性。",
+    "explanation_schema": {
+      "type": "object",
+      "properties": {
+        "observations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "proposals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "proposal_id": {
+                "type": "string"
+              },
+              "strategy": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              },
+              "expected_effect": {
+                "type": "string"
+              },
+              "tradeoffs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "proposal_id",
+              "strategy",
+              "reason",
+              "expected_effect",
+              "tradeoffs",
+              "evidence"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "reviews": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "message_id": {
+                "type": "string"
+              },
+              "proposal_id": {
+                "type": "string"
+              },
+              "disposition": {
+                "type": "string",
+                "enum": [
+                  "accept",
+                  "modify",
+                  "reject",
+                  "needs_clarification"
+                ]
+              },
+              "assessment": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "message_id",
+              "proposal_id",
+              "disposition",
+              "assessment"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "conflicts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "follow_up_reason": {
+          "type": "string"
+        },
+        "decision_reason": {
+          "type": "string"
+        },
+        "uncertainties": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "observations",
+        "proposals",
+        "reviews",
+        "conflicts",
+        "follow_up_reason",
+        "decision_reason",
+        "uncertainties"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "display_text": "Human 人工測試：refill_competition",
+  "message_id": "core-test-refill_competition",
+  "explanation": {
+    "observations": [],
+    "proposals": [],
+    "reviews": [],
+    "conflicts": [],
+    "follow_up_reason": "initial",
+    "decision_reason": "本機測試資料，尚未執行世界操作。",
+    "uncertainties": []
+  },
+  "detail_text": "再次討論的原因：initial"
+}

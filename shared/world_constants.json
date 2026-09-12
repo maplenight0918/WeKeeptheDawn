@@ -1,0 +1,103 @@
+{
+  "resources": {
+    "water": {
+      "unit": "L",
+      "initial": {"value": 3000, "unit": "L", "source": "guide §1.1"},
+      "capacity": {"value": 4000, "unit": "L", "source": "guide §1.1"},
+      "warning": {"value": 400, "unit": "L", "source": "guide §1.1"}
+    },
+    "oxygen": {
+      "unit": "OU",
+      "initial": {"value": 8000, "unit": "OU", "source": "guide §1.1"},
+      "capacity": {"value": 15000, "unit": "OU", "source": "guide §1.1"},
+      "warning": {"value": 600, "unit": "OU", "source": "guide §1.1"}
+    },
+    "food": {
+      "unit": "kcal",
+      "initial": {"value": 120000, "unit": "game_kcal", "source": "guide §1.1"},
+      "capacity": {"value": 200000, "unit": "game_kcal", "source": "guide §1.1"},
+      "warning": {"value": 12000, "unit": "game_kcal", "source": "guide §1.1"}
+    },
+    "power": {
+      "unit": "EU",
+      "initial": {"value": 6000, "unit": "EU", "source": "guide §1.1"},
+      "capacity": {"value": 10000, "unit": "EU", "source": "guide §1.1"},
+      "warning": {"value": 1000, "unit": "EU", "source": "guide §1.1"}
+    }
+  },
+  "environment": {
+    "light_umol_m2_s": {"value": 250, "unit": "µmol/m²/s", "source": "guide §1.2"},
+    "photoperiod_hours": {"value": 14, "unit": "h/day", "source": "guide §1.2"},
+    "temperature_c": {"value": 22, "unit": "°C", "source": "guide §1.2"},
+    "relative_humidity_percent": {"value": 65, "unit": "%", "source": "guide §1.2"},
+    "co2_ppm": {"value": 500, "unit": "ppm", "source": "guide §1.2"}
+  },
+  "plots": {
+    "count": {"value": 20, "unit": "plot", "source": "guide §1.2"},
+    "area_m2": {"value": 5, "unit": "m²/plot", "source": "guide §1.2"},
+    "initial_per_crop": {"value": 4, "unit": "plot/crop", "source": "guide §1.2"},
+    "plants_per_m2": {"value": 27, "unit": "plant/m²", "source": "guide §1.2"}
+  },
+  "time": {
+    "hours_per_day": {"value": 24, "unit": "h/day", "source": "guide §2.3"},
+    "simulation_hours_per_tick": {"value": 1, "unit": "h/tick", "source": "guide §1.3"},
+    "real_seconds_per_tick": {"value": 2, "unit": "s/tick", "source": "guide §1.3"},
+    "crop_days_per_growth_tick": {"value": 1, "unit": "literature_day/growth_tick", "source": "guide §1.3"}
+  },
+  "harvest": {
+    "convertible_fraction": {"value": 1, "unit": "fraction", "source": "guide §2.2"}
+  },
+  "crew": {
+    "count": {"value": 4, "unit": "crew", "source": "guide §1.2"},
+    "food_energy": {
+      "initial": {"value": 2400, "unit": "game_kcal", "source": "guide §2.3"},
+      "capacity": {"value": 3000, "unit": "game_kcal", "source": "guide §2.3"},
+      "warning": {"value": 700, "unit": "game_kcal", "source": "guide §2.3"},
+      "refill_max": {"value": 1000, "unit": "game_kcal/action", "source": "guide §2.3"}
+    },
+    "water": {
+      "initial": {"value": 1.5, "unit": "L", "source": "guide §2.3"},
+      "capacity": {"value": 2, "unit": "L", "source": "guide §2.3"},
+      "warning": {"value": 0.4, "unit": "L", "source": "guide §2.3"},
+      "refill_max": {"value": 0.5, "unit": "L/action", "source": "guide §2.3"}
+    },
+    "daily_consumption": {
+      "food_energy": {"value": 3054, "unit": "literature_kcal/crew/day", "source": "guide §2.3"},
+      "oxygen_kg": {"value": 0.895, "unit": "kg/crew/day", "source": "guide §2.3"},
+      "water": {"value": 3.217, "unit": "L/crew/day", "source": "guide §2.3"}
+    },
+    "conversion": {
+      "food_energy": {"value": 1, "unit": "game_kcal/literature_kcal", "source": "guide §2.3"},
+      "oxygen_ou_per_kg": {"value": 1000, "unit": "OU/kg", "source": "guide §2.3"},
+      "water": {"value": 1, "unit": "game_L/literature_L", "source": "guide §2.3"},
+      "refill_ratio": {"value": 1, "unit": "personal/public", "source": "guide §2.3"}
+    }
+  },
+  "irrigation": {
+    "water_l": {"value": 8.7, "unit": "L/plot/tick", "source": "guide §2.1"},
+    "power_eu": {"value": 5, "unit": "EU/plot/tick", "source": "guide §2.1"},
+    "warning_after_ticks": {"value": 1, "unit": "consecutive_tick", "source": "guide §2.1"},
+    "critical_after_ticks": {"value": 2, "unit": "consecutive_tick", "source": "guide §2.1"},
+    "death_after_ticks": {"value": 3, "unit": "consecutive_tick", "source": "guide §2.1"}
+  },
+  "generation": {
+    "food_energy_per_work": {"value": 100, "unit": "game_kcal/work", "source": "guide §2.4"},
+    "oxygen_per_work": {"value": 25, "unit": "OU/work", "source": "guide §2.4"},
+    "power_per_work": {"value": 250, "unit": "EU/work", "source": "guide §2.4"},
+    "max_work_per_crew": {"value": 1, "unit": "work/crew/tick", "source": "guide §2.4"},
+    "stations": {"value": 4, "unit": "station", "source": "guide §3.2 工作占用表"}
+  },
+  "water_plant": {
+    "power_per_l": {"value": 2, "unit": "EU/L", "source": "guide §2.5"},
+    "oxygen_per_l": {"value": 0.2, "unit": "OU/L", "source": "guide §2.5"},
+    "max_l_per_tick": {"value": 250, "unit": "L/tick", "source": "guide §2.5"}
+  },
+  "occupancy": {
+    "work_ticks": {"value": 1, "unit": "tick/action", "source": "guide §3.2 工作占用表"},
+    "crew_per_plot_op": {"value": 1, "unit": "crew/action", "source": "guide §3.2 工作占用表"},
+    "meal_capacity": {"value": 4, "unit": "crew/tick", "source": "guide §3.2 工作占用表"},
+    "drink_capacity": {"value": 4, "unit": "crew/tick", "source": "guide §3.2 工作占用表"},
+    "console_work_ticks": {"value": 0, "unit": "tick/action", "source": "guide §3.2 工作占用表"},
+    "movement_work_ticks": {"value": 0, "unit": "tick/movement", "source": "guide §3.2 工作占用表"}
+  }
+}

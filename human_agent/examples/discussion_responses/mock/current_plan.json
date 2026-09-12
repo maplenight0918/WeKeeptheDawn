@@ -1,0 +1,70 @@
+{
+  "message_id": "human-d0fb10483612460ca4b032059a68df84",
+  "discussion_id": "discussion-test-current_plan",
+  "round": 1,
+  "sender": "human",
+  "recipient": "core",
+  "world_version": 0,
+  "display_text": "已完成個人與公共資源分析。本輪提供 0 項供 Core 審核的建議。已有單 tick 算術預檢，仍由 Core 決策。",
+  "explanation": {
+    "observations": [
+      "crew-0：存活，個人能量 2400 遊戲 kcal，水 1.5 L。",
+      "crew-1：存活，個人能量 2400 遊戲 kcal，水 1.5 L。",
+      "crew-2：存活，個人能量 2400 遊戲 kcal，水 1.5 L。",
+      "crew-3：存活，個人能量 2400 遊戲 kcal，水 1.5 L。",
+      "公共 water：3000 L，庫存標示 normal。",
+      "公共 oxygen：8000 OU，庫存標示 normal。",
+      "公共 food：120000 game_kcal，庫存標示 normal。",
+      "公共 power：6000 EU，庫存標示 normal。",
+      "原計畫預檢狀態：feasible_in_scope；unsafe_in_scope 表示已知植物死亡等不安全結果，並非全員死亡；incomplete 表示核算依據不足。"
+    ],
+    "proposals": [],
+    "reviews": [],
+    "conflicts": [],
+    "follow_up_reason": "",
+    "decision_reason": "Mock 路徑已收到本輪問題及追問原因；未使用模型進行語意評估。",
+    "uncertainties": [
+      "僅有單 tick 規則算術預檢，沒有未來 Simulator，也沒有執行世界操作。",
+      "規則數值已對照本機 world v0.12；共享發電比例及死亡微順序仍需與世界後端整合驗證。",
+      "科學文獻尚未全面逐項審閱；已檢索不等於已證明建議。",
+      "decision_reason 與 reviews 是模型公開評估；量化效果只以候選核算結果為準。",
+      "目前是 mock 測試回覆，未呼叫遠端 LLM。",
+      "Mock 不代表已完成前輪提案的語意審閱。"
+    ]
+  },
+  "content": {
+    "observations": [
+      "crew-0：存活，個人能量 2400 遊戲 kcal，水 1.5 L。",
+      "crew-1：存活，個人能量 2400 遊戲 kcal，水 1.5 L。",
+      "crew-2：存活，個人能量 2400 遊戲 kcal，水 1.5 L。",
+      "crew-3：存活，個人能量 2400 遊戲 kcal，水 1.5 L。",
+      "公共 water：3000 L，庫存標示 normal。",
+      "公共 oxygen：8000 OU，庫存標示 normal。",
+      "公共 food：120000 game_kcal，庫存標示 normal。",
+      "公共 power：6000 EU，庫存標示 normal。",
+      "原計畫預檢狀態：feasible_in_scope；unsafe_in_scope 表示已知植物死亡等不安全結果，並非全員死亡；incomplete 表示核算依據不足。"
+    ],
+    "priorities": [
+      "優先處理人員存活、吃喝補給與公共氧氣，再比較工作和供水用電。"
+    ],
+    "suggested_actions": [],
+    "acceptable_tradeoffs": [
+      "進食、飲水與作物工作會占用人員；部分發電仍不能同 tick 兼做其他工作。",
+      "降低發電量可減少額外能量與氧氣消耗，也會減少電力產出。"
+    ],
+    "evidence_and_unknowns": [
+      "world v0.12 rules_hash=8cb7fc2c70beb48f7c3f2edec3819f33f4b4968f899b3e9f3eeed504ae4a2e93",
+      "Core rules_version=greenhouse-2026-09-12-v1",
+      "使用者確認換算：1 EU = 3.9745 kWh = 3974.5 Wh；來源 unit_conversion.eu_kwh，非 NASA 認證，不改遊戲係數。",
+      "公共電力 6000 EU 對應 23847 kWh。",
+      "執行模式 mock；耗時 2.27 ms；LLM 呼叫 0 次。",
+      "world v0.12 規則 crew.task.exclusive",
+      "僅有單 tick 規則算術預檢，沒有未來 Simulator，也沒有執行世界操作。",
+      "規則數值已對照本機 world v0.12；共享發電比例及死亡微順序仍需與世界後端整合驗證。",
+      "科學文獻尚未全面逐項審閱；已檢索不等於已證明建議。",
+      "decision_reason 與 reviews 是模型公開評估；量化效果只以候選核算結果為準。",
+      "目前是 mock 測試回覆，未呼叫遠端 LLM。",
+      "Mock 不代表已完成前輪提案的語意審閱。"
+    ]
+  }
+}

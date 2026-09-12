@@ -1,0 +1,13 @@
+# Copy to config/runtime.yaml and set GREENHOUSE_CONFIG=config/runtime.yaml.
+# Decisions still come from the teammate's Agent; mock replays recorded fixtures.
+plan_source: external
+decision_timeout_seconds: 420
+openai:
+  model: null
+  model_env: OPENAI_MODEL
+  api_key_env: OPENAI_API_KEY
+  base_url: https://api.openai.com/v1
+  timeout_seconds: 30
+
+# Store the secret in the named environment variable or an untracked .env file.
+# Literal api_key fields are rejected. This file never contains a key value.

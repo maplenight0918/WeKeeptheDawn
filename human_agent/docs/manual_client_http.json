@@ -1,0 +1,22 @@
+{
+  "mode": "mock",
+  "command": "python examples/discussion_client.py --fixture current_plan --rounds 3",
+  "passed": true,
+  "utf8_output": true,
+  "saved_request_count": 3,
+  "saved_response_count": 3,
+  "metrics": [
+    {
+      "http_status": 200,
+      "client_elapsed_seconds": 0.01
+    },
+    {
+      "http_status": 200,
+      "client_elapsed_seconds": 0.005
+    },
+    {
+      "http_status": 200,
+      "client_elapsed_seconds": 0.005
+    }
+  ]
+}
