@@ -22,7 +22,7 @@ class ProviderError(RuntimeError):
     pass
 
 
-def post_json(endpoint, payload, timeout=30):
+def post_json(endpoint, payload, timeout=120):
     key = os.environ.get("OPENROUTER_API_KEY", "")
     if not key or "..." in key:
         raise ProviderError("請在 .env 設定有效的 OPENROUTER_API_KEY。")

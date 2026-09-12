@@ -1,6 +1,7 @@
 import uuid
 import asyncio
 import json
+import logging
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request, Body
 from fastapi.exceptions import RequestValidationError
@@ -14,6 +15,7 @@ from app.discussion_types import DiscussionRequest, DiscussionReply
 from app.discussion import map_discussion, make_reply
 from fastapi import HTTPException
 from pydantic import ValidationError
+from app.request_lifecycle import diagnostic_codes, while_connected
 
 def create_app(settings=None,agent=None):
     discussion_examples={name:{'summary':label,'value':json.loads((ROOT/'examples/discussion_requests'/(name+'.json')).read_text(encoding='utf-8'))}
@@ -62,14 +64,17 @@ def create_app(settings=None,agent=None):
         except ValidationError as exc:
             raise HTTPException(422,detail={'error':'invalid_human_snapshot','issues':[{'location':list(e['loc']),'type':e['type']} for e in exc.errors()]}) from None
         try:
-            async with asyncio.timeout(44):
-                result=await app.state.agent.analyze(snapshot,discussion=context)
+            async with asyncio.timeout(app.state.settings.analysis_timeout_seconds):
+                result=await while_connected(request, app.state.agent.analyze(snapshot,discussion=context))
         except TimeoutError:
             raise HTTPException(504,detail={'error':'analysis_deadline_exceeded','request_id':message.message_id}) from None
         if result.execution_mode=='degraded':
+            codes=diagnostic_codes(result)
+            logging.getLogger(__name__).warning('Human analysis failed codes=%s', codes)
             # Core requires failures to be non-2xx. Preserve useful baseline inside the error,
             # but never publish degraded output as a successful specialist message.
             raise HTTPException(502,detail={'error':'specialist_analysis_failed','request_id':message.message_id,
+                'error_codes':codes,
                 'baseline':{'analysis_status':result.analysis_status,'current_world_condition':result.current_world_condition,
                             'risks':[r.model_dump() for r in result.risks],'missing_fields':result.missing_fields}})
         return make_reply(message,result,context)

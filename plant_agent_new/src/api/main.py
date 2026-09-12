@@ -35,7 +35,7 @@ app = FastAPI(title="Plant Agent API", lifespan=lifespan)
 @app.post("/discuss", response_model=DiscussOutput)
 async def discuss_endpoint(inp: DiscussInput, request: Request):
     try:
-        return await asyncio.wait_for(asyncio.to_thread(discuss, request.app.state.store, inp), timeout=42)
+        return await asyncio.wait_for(asyncio.to_thread(discuss, request.app.state.store, inp), timeout=120)
     except TimeoutError:
         raise HTTPException(504, "Plant 討論逾時，請保持世界暫停。")
 

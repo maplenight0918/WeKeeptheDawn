@@ -31,7 +31,7 @@ def complete(system, user, max_tokens=None):
     ]}
     if max_tokens is not None:
         payload["max_tokens"] = max_tokens
-    result = post_json(ENDPOINT, payload, timeout=35)
+    result = post_json(ENDPOINT, payload, timeout=120)
     try:
         return parse_json(result["choices"][0]["message"]["content"])
     except (KeyError, IndexError, TypeError) as exc:

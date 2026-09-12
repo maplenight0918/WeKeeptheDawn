@@ -18,10 +18,13 @@ log = logging.getLogger(__name__)
 def failure_codes(exc):
     """Allowlisted diagnostics only: never emit exception text, bodies or URLs."""
     from urllib.error import HTTPError, URLError
+    from agent_runner.specialist_http import SpecialistFailure
     codes, seen = [], set()
     while exc is not None and id(exc) not in seen and len(codes) < 8:
         seen.add(id(exc))
-        if isinstance(exc, (HTTPError, httpx.HTTPStatusError)):
+        if isinstance(exc, SpecialistFailure):
+            codes.extend(exc.codes)
+        elif isinstance(exc, (HTTPError, httpx.HTTPStatusError)):
             status = exc.code if isinstance(exc, HTTPError) else exc.response.status_code
             codes.append(f"http_{status}")
         elif isinstance(exc, (TimeoutError, httpx.TimeoutException)):

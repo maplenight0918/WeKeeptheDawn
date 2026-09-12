@@ -24,17 +24,17 @@ class Settings:
     embedding_dimensions: int = 1024
     embedding_input_type_policy: str = 'unspecified'
     embedding_batch_size: int = 16
-    embedding_timeout_seconds: float = 10
+    embedding_timeout_seconds: float = 120
     llm_provider: str = 'openai_compatible'
     llm_base_url: str = 'https://api.openai.com/v1'
     llm_model: str = 'gpt-6-astra'
     llm_api_key: str = field(default='', repr=False)
-    llm_timeout_seconds: float = 30
-    analysis_timeout_seconds: float = 45
+    llm_timeout_seconds: float = 120
+    analysis_timeout_seconds: float = 120
     max_llm_calls: int = 4
     max_tool_calls: int = 8
     human_agent_url: str = 'http://127.0.0.1:8000'
-    brain_client_timeout_seconds: float = 60
+    brain_client_timeout_seconds: float = 120
 
     @classmethod
     def load(cls):
@@ -78,7 +78,7 @@ class Settings:
                 raise ConfigurationError('Invalid setting: ' + key.upper())
         self.max_llm_calls = min(self.max_llm_calls, 4)
         self.max_tool_calls = min(self.max_tool_calls, 8)
-        self.analysis_timeout_seconds = min(self.analysis_timeout_seconds, 45)
+        self.analysis_timeout_seconds = min(self.analysis_timeout_seconds, 120)
 
     def missing(self):
         return [k.upper() for k in ['llm_api_key','llm_model','llm_base_url','embedding_api_key','embedding_model','embedding_base_url'] if not getattr(self,k)]

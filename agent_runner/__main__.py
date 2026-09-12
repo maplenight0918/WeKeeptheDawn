@@ -8,6 +8,7 @@ import os
 from core_agent.core_agent import CoreAgent, GPTDecisionModel, HTTPSpecialist
 from agent_runner.core_port import CorePort
 from agent_runner.runner import AgentBridge
+from agent_runner.specialist_http import CancellableSpecialist
 
 
 def main():
@@ -34,9 +35,10 @@ def main():
         from agent_runner.fixtures import ActionFixtureModel, FixtureModel, FixtureSpecialist
         core = CoreAgent(ActionFixtureModel() if args.fixture_actions else FixtureModel(), FixtureSpecialist(), FixtureSpecialist())
     else:
-        core = CoreAgent(GPTDecisionModel(),
-                         HTTPSpecialist(os.environ["PLANT_AGENT_URL"], token=os.getenv("PLANT_AGENT_TOKEN")),
-                         HTTPSpecialist(os.environ["HUMAN_AGENT_URL"], token=os.getenv("HUMAN_AGENT_TOKEN")))
+        core = CoreAgent(GPTDecisionModel(timeout=120),
+                         CancellableSpecialist(os.environ["PLANT_AGENT_URL"], token=os.getenv("PLANT_AGENT_TOKEN"), timeout=120),
+                         CancellableSpecialist(os.environ["HUMAN_AGENT_URL"], token=os.getenv("HUMAN_AGENT_TOKEN"), timeout=120),
+                         timeout=120)
     try:
         asyncio.run(AgentBridge(CorePort(core, mock=mock), args.game_url).run(max_ticks=args.max_ticks))
     except KeyboardInterrupt:

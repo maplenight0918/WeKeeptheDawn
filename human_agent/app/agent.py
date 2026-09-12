@@ -129,7 +129,7 @@ class HumanAgent:
         if missing:
             out['missing_fields'].extend(missing)
             out['warnings'].append('Missing provider fields: '+', '.join(missing))
-        deadline=Deadline(max(0.01,s.analysis_timeout_seconds-1))
+        deadline=Deadline(s.analysis_timeout_seconds)
         tool_count=0; audits={}; evidence={x['id']:x for x in out['evidence']}; degraded=False
 
         async def tool(name,args):
